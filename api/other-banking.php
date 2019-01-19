@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
     $username = $_POST['username'];
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT * FROM superusers WHERE username = '" . $username . "'";
+    $sql  = "SELECT * FROM banking WHERE username = '" . $username . "' ORDER BY id DESC LIMIT 0, 5";
     
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {
@@ -34,5 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo json_encode($myArray);
         }
     }
+	mysqli_close($conn);
 }
 ?>

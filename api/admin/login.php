@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'FPh76g0MSZ2okeWQmShYDlXakjgjhbej';
+	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
 	$userKey   = $_POST['AUTH_KEY'];
@@ -37,11 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $myArray[] = $row;
             }
             echo json_encode($myArray);
-        } else {
-            echo "Fail";
         }
-    } else {
-        echo "Fail";
     }
 	mysqli_close($conn);
 }

@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'FPh76g0MSZ2okeWQmShYDlXakjgjhbej';
+	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
     $username  = $_POST['username'];

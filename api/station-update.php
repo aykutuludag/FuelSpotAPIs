@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'FPh76g0MSZ2okeWQmShYDlXakjgjhbej';
+	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
     // Mandatory
     $stationID = $_POST['stationID'];
@@ -43,50 +43,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (strlen($facilities) > 0) {
         $var2 = " facilities='$facilities',";
         $sql  = $sql . $var2;
-    } else {
-		$var3 = " facilities='',";
-        $sql  = $sql . $var3;
-	}
+    }
     
     if (strlen($gasolinePrice) > 0) {
-        $var4 = " gasolinePrice='$gasolinePrice',";
-        $sql  = $sql . $var4;
+        $var3 = " gasolinePrice='$gasolinePrice',";
+        $sql  = $sql . $var3;
     }
     
     if (strlen($dieselPrice) > 0) {
-        $var5 = " dieselPrice='$dieselPrice',";
-        $sql  = $sql . $var5;
+        $var4 = " dieselPrice='$dieselPrice',";
+        $sql  = $sql . $var4;
     }
     
     if (strlen($LPGPrice) > 0) {
-        $var6 = " lpgPrice='$LPGPrice',";
-        $sql  = $sql . $var6;
+        $var5 = " lpgPrice='$LPGPrice',";
+        $sql  = $sql . $var5;
     }
     
     if (strlen($elecPrice) > 0) {
-        $var7 = " electricityPrice='$elecPrice',";
-        $sql   = $sql . $var7;
+        $var6 = " electricityPrice='$elecPrice',";
+        $sql   = $sql . $var6;
     }
     
     if (strlen($licenseNo) > 0) {
-        $var8 = " licenseNo='$licenseNo',";
-        $sql   = $sql . $var8;
-    } else {
-		$var9 = " licenseNo='',";
-        $sql   = $sql . $var9;
-	}
+        $var7 = " licenseNo='$licenseNo',";
+        $sql   = $sql . $var7;
+    }
     
     if (strlen($owner) > 0) {
-        $var10 = " owner='$owner',";
-        $sql   = $sql . $var10;
-    } else {
-		$var11 = " owner='',";
-        $sql   = $sql . $var11;
-	}
+        $var8 = " owner='$owner',";
+        $sql   = $sql . $var8;
+    }
     
     if (strlen($hasFuelDelivery) > 0) {
-        $var12 = " isDeliveryAvailable='$hasFuelDelivery',";
-        $sql   = $sql . $var12;
+        $var9 = " isDeliveryAvailable='$hasFuelDelivery',";
+        $sql   = $sql . $var9;
     }
     
     if ($sql == "UPDATE stations SET") {

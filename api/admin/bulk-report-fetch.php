@@ -1,22 +1,22 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'FPh76g0MSZ2okeWQmShYDlXakjgjhbej';
+	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
 	$userKey   = $_POST['AUTH_KEY'];
-
+	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
     }
-	
-	define('DB_USERNAME', 'u8276450_user');
+ 
+    define('DB_USERNAME', 'u8276450_user');
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT * FROM campaigns";
+    $sql  = "SELECT * FROM reports";
     
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {
@@ -28,6 +28,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo json_encode($myArray);
         }
     }
-	mysqli_close($conn);
 }
 ?>

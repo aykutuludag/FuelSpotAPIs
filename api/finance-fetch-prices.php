@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
-    $username = $_POST['username'];
+    $country = $_POST['country'];
 	$userKey   = $_POST['AUTH_KEY'];
 	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 	
-	if (strlen($username) == 0) {
-        echo "username required";
+	if (strlen($country) == 0) {
+        echo "country required";
         return;
     }
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT * FROM superusers WHERE username = '" . $username . "'";
+    $sql  = "SELECT * FROM finance WHERE country = '" . $country . "' ORDER BY date ASC LIMIT 0, 25";
     
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {
@@ -34,5 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo json_encode($myArray);
         }
     }
+	mysqli_close($conn);
 }
 ?>

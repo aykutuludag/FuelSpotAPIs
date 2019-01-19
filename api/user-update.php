@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'FPh76g0MSZ2okeWQmShYDlXakjgjhbej';
+	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
     $username  = $_POST['username'];
@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 	
     if (strlen($photo) > 0) {
-		$actualpath       = 'https://fuel-spot.com/uploads/users' . $username . '.jpg';
+		$actualpath       = 'https://fuel-spot.com/uploads/users/' . $username . '.jpg';
 
         $var4 = " photo = '$actualpath',";
         $sql  = $sql . $var4;

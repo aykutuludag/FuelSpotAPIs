@@ -1,10 +1,11 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $AUTH_KEY  = 'FPh76g0MSZ2okeWQmShYDlXakjgjhbej';
+    $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
     $id            = $_POST['purchaseID'];
 	$username      = $_POST['username'];
+	$plateNO         = $_POST['plateNO'];
 	$billPhoto   = $_POST['billPhoto'];
 	$userKey   = $_POST['AUTH_KEY'];
 	
@@ -23,6 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 	
+	if (strlen($plateNO) == 0) {
+        echo "plateNO required";
+        return;
+    }
+	
 	if (strlen($billPhoto) == 0) {
         echo "billPhoto required";
         return;
@@ -37,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (strlen($billPhoto) > 0) {
 		$timeStamp = time() . '.jpg';
-        $actualpath       = 'https://fuel-spot.com/uploads/bills/' . $username . '-'. $timeStamp;
-		file_put_contents('/home/u8276450/fuel-spot.com/uploads/bills/' . $username . '-'. $timeStamp, base64_decode($billPhoto));
+        $actualpath       = 'https://fuel-spot.com/uploads/bills/' . $username . '-' . $plateNO . '-' . $timeStamp;
+		file_put_contents('/home/u8276450/fuel-spot.com/uploads/bills/' . $username . '-' . $plateNO . '-' . $timeStamp, base64_decode($billPhoto));
 		
 		$sql = "UPDATE purchases SET billPhoto = '$actualpath' WHERE id= '" . $id . "'";
 		

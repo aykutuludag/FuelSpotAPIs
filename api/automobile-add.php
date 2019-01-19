@@ -1,51 +1,51 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'FPh76g0MSZ2okeWQmShYDlXakjgjhbej';
+    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
     
-	// Mandatory
+    // Mandatory
     $username  = $_POST['username'];
     $car_brand = $_POST['carBrand'];
     $car_model = $_POST['carModel'];
-	$plate_no  = $_POST['plateNo'];
-	$fuel_pri  = $_POST['fuelPri'];
-	$car_km    = $_POST['kilometer'];
-	$userKey   = $_POST['AUTH_KEY'];
-	
-	// Optional
+    $plate_no  = $_POST['plateNo'];
+    $fuel_pri  = $_POST['fuelPri'];
+    $car_km    = $_POST['kilometer'];
+    $userKey   = $_POST['AUTH_KEY'];
+    
+    // Optional
     $fuel_sec  = $_POST['fuelSec'];
     $car_photo = $_POST['carPhoto'];
-	
+    
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
     }
-	
-	if (strlen($username) == 0) {
+    
+    if (strlen($username) == 0) {
         echo "username required";
         return;
     }
-	
-	if (strlen($car_brand) == 0) {
+    
+    if (strlen($car_brand) == 0) {
         echo "carBrand required";
         return;
     }
-	
-	if (strlen($car_model) == 0) {
+    
+    if (strlen($car_model) == 0) {
         echo "carModel required";
         return;
     }
-	
-	if (strlen($plate_no) == 0) {
+    
+    if (strlen($plate_no) == 0) {
         echo "plateNo required";
         return;
     }
-	
-	if (strlen($fuel_pri) == 0 || $fuel_pri == -1) {
+    
+    if (strlen($fuel_pri) == 0 || $fuel_pri == -1) {
         echo "fuelPri required";
         return;
     }
-	
-	if (strlen($car_km) == 0) {
+    
+    if (strlen($car_km) == 0) {
         echo "kilometer required";
         return;
     }
@@ -56,15 +56,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-	
+    
     if ($car_photo != null) {
-        $actualpath       = 'https://fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg';
+        $actualpath = 'https://fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg';
         file_put_contents('/home/u8276450/fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg', base64_decode($car_photo));
-		$sql     = "INSERT INTO automobiles(owner,car_brand,car_model,fuelPri,fuelSec,kilometer,carPhoto,plateNo) VALUES ('$username','$car_brand','$car_model','$fuel_pri','$fuel_sec','$car_km','$actualpath','$plate_no')";
     } else {
-		 $sql     = "INSERT INTO automobiles(owner,car_brand,car_model,fuelPri,fuelSec,kilometer,plateNo) VALUES ('$username','$car_brand','$car_model','$fuel_pri','$fuel_sec','$car_km','$plate_no')";
+		$actualpath = '';
     }
 	
+    $sql = "INSERT INTO automobiles(owner,car_brand,car_model,fuelPri,fuelSec,kilometer,carPhoto,plateNo) VALUES ('$username','$car_brand','$car_model','$fuel_pri','$fuel_sec','$car_km','$actualpath','$plate_no')";
+    
     $result  = mysqli_query($conn, $sql);
     $last_id = $conn->insert_id;
     
@@ -79,6 +80,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo json_encode($myArray);
         }
     }
-	mysqli_close($conn);
+    mysqli_close($conn);
 }
 ?>

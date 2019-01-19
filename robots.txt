@@ -5,4 +5,3 @@ Disallow: /api
 Disallow: /default_icons
 Disallow: /station_icons
 Disallow: /uploads
-Disallow: /web

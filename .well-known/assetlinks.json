@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.fuelspot",
+    "sha256_cert_fingerprints":
+    ["EC:44:2A:F1:68:87:9C:A2:A7:97:36:12:0D:E1:1F:D0:B7:62:FF:E1:AE:B5:8D:B8:FC:F7:A9:A0:79:1C:5E:AE"]
+  }
+}]
