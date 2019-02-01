@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
     $username = $_POST['username'];
@@ -12,17 +12,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 	
 	if (strlen($username) == 0) {
-		echo "username required";
-		return;
-	}
-
+        echo "usernam required";
+        return;
+    }
+ 
     define('DB_USERNAME', 'u8276450_user');
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT * FROM purchases WHERE username = '" . $username . "' ORDER BY time DESC";
+    $sql  = "SELECT * FROM automobiles WHERE owner = '" . $username . "'";
     
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {
@@ -36,4 +36,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 	mysqli_close($conn);
 }
-?>

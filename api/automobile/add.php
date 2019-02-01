@@ -50,6 +50,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
     
+    if ($car_photo != null) {
+        $actualpath = 'https://fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg';
+        file_put_contents('/home/u8276450/fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg', base64_decode($car_photo));
+    } else {
+        $actualpath = '';
+    }
+    
     define('DB_USERNAME', 'u8276450_user');
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
@@ -57,29 +64,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     
-    if ($car_photo != null) {
-        $actualpath = 'https://fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg';
-        file_put_contents('/home/u8276450/fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg', base64_decode($car_photo));
-    } else {
-		$actualpath = '';
-    }
-	
-    $sql = "INSERT INTO automobiles(owner,car_brand,car_model,fuelPri,fuelSec,kilometer,carPhoto,plateNo) VALUES ('$username','$car_brand','$car_model','$fuel_pri','$fuel_sec','$car_km','$actualpath','$plate_no')";
-    
-    $result  = mysqli_query($conn, $sql);
-    $last_id = $conn->insert_id;
-    
-    $sql2 = "SELECT * FROM automobiles WHERE id = '" . $last_id . "'";
-    $result2 = $conn->query($sql2) or die(mysqli_connect_error());
-    if (!empty($result2)) {
-        // check for empty result
-        if (mysqli_num_rows($result2) > 0) {
-            while ($row = $result2->fetch_array(MYSQL_ASSOC)) {
-                $myArray[] = $row;
-            }
-            echo json_encode($myArray);
+    // Check plateNo exist
+    $sql_plate = "SELECT * FROM automobiles WHERE plateNo = '" . $plate_no . "'";
+    $result_plate = $conn->query($sql_plate) or die(mysqli_connect_error());
+    if (!empty($result_plate)) {
+        if (mysqli_num_rows($result_plate) > 0) {
+            echo "plateNo exist";
+            return;
         }
+    }
+    
+    // Insert automobile
+    $sql = "INSERT INTO automobiles(owner,car_brand,car_model,fuelPri,fuelSec,kilometer,carPhoto,plateNo) VALUES ('$username','$car_brand','$car_model','$fuel_pri','$fuel_sec','$car_km','$actualpath','$plate_no')";
+    if ($conn->query($sql) === TRUE) {
+        echo "Success";
+    } else {
+        echo "Fail";
     }
     mysqli_close($conn);
 }
-?>

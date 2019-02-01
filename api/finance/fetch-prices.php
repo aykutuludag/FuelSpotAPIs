@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 	
-	if (strlen($country) == 0 ) {
-        echo "stationID required";
+	if (strlen($country) == 0) {
+        echo "country required";
         return;
     }
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT time, totalPrice FROM purchases WHERE country = '" . $country . "' AND isVerified=1 ORDER BY time ASC LIMIT 0, 25";
+    $sql  = "SELECT * FROM finance WHERE country = '" . $country . "' ORDER BY date DESC LIMIT 0, 50";
     
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {

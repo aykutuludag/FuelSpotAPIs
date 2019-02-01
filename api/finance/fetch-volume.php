@@ -1,9 +1,9 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
-    $vehicleID = $_POST['vehicleID'];
+    $country = $_POST['country'];
 	$userKey   = $_POST['AUTH_KEY'];
 	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
@@ -11,18 +11,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 	
-	if (strlen($vehicleID) == 0 || $vehicleID == 0) {
-        echo "vehicleID required";
+	if (strlen($country) == 0 ) {
+        echo "stationID required";
         return;
     }
- 
+
     define('DB_USERNAME', 'u8276450_user');
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT * FROM automobiles WHERE id = '" . $vehicleID . "'";
+    $sql  = "SELECT time, totalPrice FROM purchases WHERE country = '" . $country . "' AND isVerified=1 ORDER BY time DESC LIMIT 0, 50";
     
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {

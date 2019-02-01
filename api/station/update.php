@@ -4,18 +4,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
     // Mandatory
     $stationID = $_POST['stationID'];
-	$userKey          = $_POST['AUTH_KEY'];
+	$stationName  = $_POST['stationName'];
+	$country      = $_POST['country'];
+	$userKey      = $_POST['AUTH_KEY'];
     
 	// Optional but at least one required.
-    $stationVicinity  = $_POST['stationVicinity'];
     $facilities       = $_POST['facilities'];
     $gasolinePrice    = $_POST['gasolinePrice'];
     $dieselPrice      = $_POST['dieselPrice'];
     $LPGPrice         = $_POST['lpgPrice'];
     $elecPrice        = $_POST['electricityPrice'];
-    $licenseNo        = $_POST['licenseNo'];
-    $owner            = $_POST['owner'];
-    $hasFuelDelivery  = $_POST['fuelDelivery'];
     
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
@@ -27,6 +25,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
     
+	if (strlen($stationName) == 0) {
+		echo "stationName required";
+        return;
+    }
+	
+	if (strlen($country) == 0) {
+		echo "country required";
+        return;
+    }
+	
     define('DB_USERNAME', 'u8276450_user');
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
@@ -35,49 +43,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     $sql  = "UPDATE stations SET";
     
-    if (strlen($stationVicinity) > 0) {
-        $var1 = " vicinity='$stationVicinity',";
-        $sql  = $sql . $var1;
-    }
-    
     if (strlen($facilities) > 0) {
-        $var2 = " facilities='$facilities',";
-        $sql  = $sql . $var2;
+        $var = " facilities='$facilities',";
+        $sql  = $sql . $var;
     }
     
     if (strlen($gasolinePrice) > 0) {
-        $var3 = " gasolinePrice='$gasolinePrice',";
-        $sql  = $sql . $var3;
+        $var2 = " gasolinePrice='$gasolinePrice',";
+        $sql  = $sql . $var2;
     }
     
     if (strlen($dieselPrice) > 0) {
-        $var4 = " dieselPrice='$dieselPrice',";
-        $sql  = $sql . $var4;
+        $var3 = " dieselPrice='$dieselPrice',";
+        $sql  = $sql . $var3;
     }
     
     if (strlen($LPGPrice) > 0) {
-        $var5 = " lpgPrice='$LPGPrice',";
-        $sql  = $sql . $var5;
+        $var4 = " lpgPrice='$LPGPrice',";
+        $sql  = $sql . $var4;
     }
     
     if (strlen($elecPrice) > 0) {
-        $var6 = " electricityPrice='$elecPrice',";
-        $sql   = $sql . $var6;
-    }
-    
-    if (strlen($licenseNo) > 0) {
-        $var7 = " licenseNo='$licenseNo',";
-        $sql   = $sql . $var7;
-    }
-    
-    if (strlen($owner) > 0) {
-        $var8 = " owner='$owner',";
-        $sql   = $sql . $var8;
-    }
-    
-    if (strlen($hasFuelDelivery) > 0) {
-        $var9 = " isDeliveryAvailable='$hasFuelDelivery',";
-        $sql   = $sql . $var9;
+        $var5 = " electricityPrice='$elecPrice',";
+        $sql   = $sql . $var5;
     }
     
     if ($sql == "UPDATE stations SET") {
@@ -103,4 +91,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     mysqli_close($conn);
 }
-?>

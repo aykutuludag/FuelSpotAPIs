@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
     
@@ -108,25 +108,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
     
-    define('DB_USERNAME', 'u8276450_user');
-    define('DB_PASSWORD', '^2c4C4@c)KSl');
-    define('DB_HOST', 'localhost');
-    define('DB_NAME', 'u8276450_fuelspot');
-    
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    
-    if ($billPhoto != null) {
+	if ($billPhoto != null) {
         $timeStamp  = time() . '.jpg';
         $actualpath = 'https://fuel-spot.com/uploads/bills/' . $username . '-' . $plateNO . '-' . $timeStamp;
         file_put_contents('/home/u8276450/fuel-spot.com/uploads/bills/' . $username . '-' . $plateNO . '-' . $timeStamp, base64_decode($billPhoto));
     } else {
         $actualpath = '';
     }
+	
+    define('DB_USERNAME', 'u8276450_user');
+    define('DB_PASSWORD', '^2c4C4@c)KSl');
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'u8276450_fuelspot');
     
+    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     $sql = "INSERT INTO purchases(username,vehicleID,plateNo,kilometer,stationID,stationName,stationLocation,stationIcon,fuelType,fuelPrice,fuelLiter,fuelTax,fuelType2,fuelPrice2,fuelLiter2,fuelTax2,totalPrice,country,unit,currency,billPhoto) VALUES ('$username', '$vehicleID', '$plateNO', '$kilometer' , '$stationID', '$stationName', '$stationLocation', '$stationIcon', '$fuelType', '$fuelPrice', '$fuelLiter', '$fuelTax', '$fuelType2', '$fuelPrice2', '$fuelLiter2', '$fuelTax2', '$totalPrice', '$country', '$unit', '$currency', '$actualpath')";
     
     if (mysqli_query($conn, $sql)) {
-		$sqlVehicle = "UPDATE automobiles SET kilometer='$kilometer' WHERE id= '" . $vehicleID . "'";
+		$sqlVehicle = "UPDATE automobiles SET kilometer='" . $kilometer . "' WHERE id= '" . $vehicleID . "'";
         if ($conn->query($sqlVehicle) === TRUE) {
             echo "Success";
         } else {

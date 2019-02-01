@@ -3,26 +3,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
-    $country = $_POST['country'];
+    $superusername  = $_POST['superusername'];
 	$userKey   = $_POST['AUTH_KEY'];
 	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
     }
-	
-	if (strlen($country) == 0) {
-        echo "country required";
+    
+    if (strlen($superusername) == 0) {
+        echo "superusername required";
         return;
     }
-
+   
     define('DB_USERNAME', 'u8276450_user');
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT * FROM finance WHERE country = '" . $country . "' ORDER BY date ASC LIMIT 0, 25";
+    $sql  = "SELECT * FROM stations WHERE owner = '" . $superusername . "' AND isActive='1'";
     
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {
