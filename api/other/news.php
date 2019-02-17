@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT * FROM news WHERE country = '" . $country . "'";
+    $sql  = "SELECT * FROM news WHERE country = '" . $country . "' ORDER BY releaseDate DESC LIMIT 0, 3";
     
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {

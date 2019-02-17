@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$userKey      = $_POST['AUTH_KEY'];
     
 	// Optional but at least one required.
+	$address          = $_POST['address'];
     $facilities       = $_POST['facilities'];
     $gasolinePrice    = $_POST['gasolinePrice'];
     $dieselPrice      = $_POST['dieselPrice'];
@@ -42,10 +43,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     $sql  = "UPDATE stations SET";
+	
+	if (strlen($address) > 0) {
+        $var = " vicinity='$address',";
+        $sql  = $sql . $var;
+    }
     
     if (strlen($facilities) > 0) {
-        $var = " facilities='$facilities',";
-        $sql  = $sql . $var;
+        $var1 = " facilities='$facilities',";
+        $sql  = $sql . $var1;
     }
     
     if (strlen($gasolinePrice) > 0) {
