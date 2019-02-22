@@ -15,6 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fuelPrice       = $_POST['fuelPrice'];
     $fuelLiter       = $_POST['fuelLiter'];
     $fuelTax         = $_POST['fuelTax'];
+	$subTotal  = $_POST['subTotal'];
     $totalPrice      = $_POST['totalPrice'];
     $country         = $_POST['country'];
     $unit            = $_POST['unit'];
@@ -26,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $fuelPrice2 = $_POST['fuelPrice2'];
     $fuelLiter2 = $_POST['fuelLiter2'];
     $fuelTax2   = $_POST['fuelTax2'];
+	$subTotal2  = $_POST['subTotal2'];
     $billPhoto  = $_POST['billPhoto'];
     
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
@@ -87,6 +89,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "fuelTax required";
         return;
     }
+	
+    if (strlen($subTotal) == 0) {
+        echo "subTotal required";
+        return;
+    }
     
     if (strlen($totalPrice) == 0 || $totalPrice == 0) {
         echo "totalPrice required";
@@ -122,7 +129,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql = "INSERT INTO purchases(username,vehicleID,plateNo,kilometer,stationID,stationName,stationLocation,stationIcon,fuelType,fuelPrice,fuelLiter,fuelTax,fuelType2,fuelPrice2,fuelLiter2,fuelTax2,totalPrice,country,unit,currency,billPhoto) VALUES ('$username', '$vehicleID', '$plateNO', '$kilometer' , '$stationID', '$stationName', '$stationLocation', '$stationIcon', '$fuelType', '$fuelPrice', '$fuelLiter', '$fuelTax', '$fuelType2', '$fuelPrice2', '$fuelLiter2', '$fuelTax2', '$totalPrice', '$country', '$unit', '$currency', '$actualpath')";
+    $sql = "INSERT INTO purchases(username,vehicleID,plateNo,kilometer,stationID,stationName,stationLocation,stationIcon,fuelType,fuelPrice,fuelLiter,fuelTax,subTotal,fuelType2,fuelPrice2,fuelLiter2,fuelTax2,subTotal2,totalPrice,country,unit,currency,billPhoto) VALUES ('$username', '$vehicleID', '$plateNO', '$kilometer' , '$stationID', '$stationName', '$stationLocation', '$stationIcon', '$fuelType', '$fuelPrice', '$fuelLiter', '$fuelTax', '$subTotal', '$fuelType2', '$fuelPrice2', '$fuelLiter2', '$fuelTax2', '$subTotal2', '$totalPrice', '$country', '$unit', '$currency', '$actualpath')";
     
     if (mysqli_query($conn, $sql)) {
 		$sqlVehicle = "UPDATE automobiles SET kilometer='" . $kilometer . "' WHERE id= '" . $vehicleID . "'";
