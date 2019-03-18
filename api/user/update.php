@@ -52,12 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 	
     if (strlen($photo) > 0) {
-		$actualpath       = 'https://fuel-spot.com/uploads/users/' . $username . '.jpg';
+        $actualpath = 'https://fuelspot.com.tr/uploads/users/' . $username . '.jpg';
 
         $var4 = " photo = '$actualpath',";
         $sql  = $sql . $var4;
-		
-		file_put_contents('/home/u8276450/fuel-spot.com/uploads/users/' . $username . '.jpg', base64_decode($photo));
+
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/users/' . $username . '.jpg', base64_decode($photo));
     }
     
     if (strlen($gender) > 0) {

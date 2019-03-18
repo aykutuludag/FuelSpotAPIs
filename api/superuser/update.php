@@ -47,8 +47,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 	
     if (strlen($photo) > 0) {
-		$actualpath	= 'https://fuel-spot.com/uploads/superusers/' . $username . '.jpg';
-		file_put_contents('/home/u8276450/fuel-spot.com/uploads/superusers/' . $username . '.jpg', base64_decode($photo));
+        $actualpath = 'https://fuelspot.com.tr/uploads/superusers/' . $username . '.jpg';
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/superusers/' . $username . '.jpg', base64_decode($photo));
 		
         $var3 = " photo='$actualpath',";
         $sql  = $sql . $var3;

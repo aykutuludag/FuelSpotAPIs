@@ -51,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     
     if ($car_photo != null) {
-        $actualpath = 'https://fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg';
-        file_put_contents('/home/u8276450/fuel-spot.com/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg', base64_decode($car_photo));
+        $actualpath = 'https://fuelspot.com.tr/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg';
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/automobiles/' . $username . '-' . $plate_no . '.jpg', base64_decode($car_photo));
     } else {
         $actualpath = '';
     }

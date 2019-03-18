@@ -61,12 +61,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 	
 	if (strlen($car_photo) > 0) {
-		$actualpath       = 'https://fuel-spot.com/uploads/automobiles/' . $username . '-' . $plateNo . '.jpg';
+        $actualpath = 'https://fuelspot.com.tr/uploads/automobiles/' . $username . '-' . $plateNo . '.jpg';
 		
         $var6 = " carPhoto='$actualpath',";
         $sql  = $sql . $var6;
-		
-		file_put_contents('/home/u8276450/fuel-spot.com/uploads/automobiles/' . $username . '-' . $plateNo . '.jpg', base64_decode($car_photo));
+
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/automobiles/' . $username . '-' . $plateNo . '.jpg', base64_decode($car_photo));
     }
 	
     if (strlen($plateNo) > 0) {

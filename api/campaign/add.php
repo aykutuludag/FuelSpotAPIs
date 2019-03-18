@@ -51,8 +51,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 	
     if ($campaignPhoto != null) {
-        $actualpath       = 'https://fuel-spot.com/uploads/campaigns/' . $stationID . '-' . $campaignName . '.jpg';
-        file_put_contents('/home/u8276450/fuel-spot.com/uploads/campaigns/' . $stationID . '-' . $campaignName . '.jpg', base64_decode($campaignPhoto));
+        $actualpath = 'https://fuelspot.com.tr/uploads/campaigns/' . $stationID . '-' . $campaignName . '.jpg';
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/campaigns/' . $stationID . '-' . $campaignName . '.jpg', base64_decode($campaignPhoto));
 		$sql  = "INSERT INTO campaigns(stationID,campaignName,campaignDesc,campaignPhoto,campaignStart,campaignEnd) VALUES('$stationID', '$campaignName', '$campaignDesc', '$actualpath', '$campaignStart', '$campaignEnd')";
     } else {
 		$sql  = "INSERT INTO campaigns(stationID,campaignName,campaignDesc,campaignStart,campaignEnd) VALUES('$stationID', '$campaignName', '$campaignDesc', '$campaignStart', '$campaignEnd')";

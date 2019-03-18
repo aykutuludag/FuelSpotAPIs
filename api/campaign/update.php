@@ -52,12 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     
     if (strlen($campaignPhoto) > 0) {
-		$actualpath       = 'https://fuel-spot.com/FUELSPOTAPP/campaigns/' . $stationID . '-' . $campaignName . '.jpg';
+        $actualpath = 'https://fuelspot.com.tr/FUELSPOTAPP/campaigns/' . $stationID . '-' . $campaignName . '.jpg';
 		
         $var5 = " campaignPhoto='$actualpath',";
         $sql  = $sql . $var5;
-		
-        file_put_contents('/home/u8276450/fuel-spot.com/FUELSPOTAPP/campaigns/' . $stationID . '-' . $campaignName . '.jpg', base64_decode($campaignPhoto));
+
+        file_put_contents('/home/u8276450/fuelspot.com.tr/FUELSPOTAPP/campaigns/' . $stationID . '-' . $campaignName . '.jpg', base64_decode($campaignPhoto));
     }
 	
     if ($sql == "UPDATE campaigns SET") {

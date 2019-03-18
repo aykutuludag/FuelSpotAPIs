@@ -34,8 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if ($screenshot != null) {
         $timeStamp  = time() . '.jpg';
-        $actualpath = 'https://fuel-spot.com/uploads/feedback/' . $username . '-' . $timeStamp;
-        file_put_contents('/home/u8276450/fuel-spot.com/uploads/feedback/' . $username . '-' . $timeStamp, base64_decode($screenshot));
+        $actualpath = 'https://fuelspot.com.tr/uploads/feedback/' . $username . '-' . $timeStamp;
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/feedback/' . $username . '-' . $timeStamp, base64_decode($screenshot));
         $sql = "INSERT INTO feedback(username,message,screenshot) VALUES('$username', '$message', '$actualpath')";
     } else {
         $sql = "INSERT INTO feedback(username,message) VALUES('$username', '$message')";

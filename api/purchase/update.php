@@ -43,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (strlen($billPhoto) > 0) {
 		$timeStamp = time() . '.jpg';
-        $actualpath       = 'https://fuel-spot.com/uploads/bills/' . $username . '-' . $plateNO . '-' . $timeStamp;
-		file_put_contents('/home/u8276450/fuel-spot.com/uploads/bills/' . $username . '-' . $plateNO . '-' . $timeStamp, base64_decode($billPhoto));
+        $actualpath = 'https://fuelspot.com.tr/uploads/bills/' . $username . '-' . $plateNO . '-' . $timeStamp;
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/bills/' . $username . '-' . $plateNO . '-' . $timeStamp, base64_decode($billPhoto));
 		
 		$sql = "UPDATE purchases SET billPhoto = '$actualpath' WHERE id= '" . $id . "'";
 		

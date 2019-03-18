@@ -42,8 +42,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (strlen($photo) > 0) {
         $timeStamp  = time() . '.jpg';
-        $actualpath = 'https://fuel-spot.com/uploads/reports/' . $username . '-' . $timeStamp;
-        file_put_contents('/home/u8276450/fuel-spot.com/uploads/reports/' . $username . '-' . $timeStamp, base64_decode($photo));
+        $actualpath = 'https://fuelspot.com.tr/uploads/reports/' . $username . '-' . $timeStamp;
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/reports/' . $username . '-' . $timeStamp, base64_decode($photo));
     } else {
         $actualpath = '';
     }
