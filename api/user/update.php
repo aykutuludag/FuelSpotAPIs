@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	// Optional but at least one required.
 	$name     = $_POST['name'];
-    $email    = $_POST['email'];
+    $email = $_POST['email'];
 	$photo = $_POST['photo'];
     $gender   = $_POST['gender'];
     $birthday = $_POST['birthday'];
@@ -17,7 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$country = $_POST['country'];
 	$language = $_POST['language'];
 	$vehicles = $_POST['vehicles'];
-	$favStations = $_POST['favStations'];
 
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";

@@ -1,5 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    header('Content-Type: application/json');
     $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
@@ -31,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$user_lon  = explode(";", $location)[1];
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-	$sql  = "SELECT *, ( 6371000 * acos( cos( radians('" . $user_lat . "') ) * cos( radians( SUBSTRING_INDEX(location, ';', 1) ) ) * cos( radians( SUBSTRING_INDEX(location, ';', -1) ) - radians('" . $user_lon . "') ) + sin( radians('" . $user_lat . "') ) * sin( radians( SUBSTRING_INDEX(location, ';', 1) ) ) ) ) AS distance FROM stations WHERE isActive='1' HAVING distance < '" . $radius . "' ORDER BY distance LIMIT 0, 30";
+    $sql = "SELECT *, ( 6371000 * acos( cos( radians('" . $user_lat . "') ) * cos( radians( SUBSTRING_INDEX(location, ';', 1) ) ) * cos( radians( SUBSTRING_INDEX(location, ';', -1) ) - radians('" . $user_lon . "') ) + sin( radians('" . $user_lat . "') ) * sin( radians( SUBSTRING_INDEX(location, ';', 1) ) ) ) ) AS distance FROM stations WHERE isActive='1' HAVING distance < '" . $radius . "' ORDER BY distance LIMIT 0, 25";
 	
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {

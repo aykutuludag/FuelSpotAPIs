@@ -1,5 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    header('Content-Type: application/json');
 	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 	
 	// Mandatory
@@ -12,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$userKey   = $_POST['AUTH_KEY'];
 	
 	// Optional
-	$facilities = '[{"WC":"1","Market":"1","CarWash":"1","TireRepair":"0","Mechanic":"0","Restaurant":"0","ParkSpot":"0"}]'; // Just assign pre-assumed facilities. This behavior will be changed in the future.
+    $facilities = '[{"WC":"1","Market":"1","CarWash":"1","TireRepair":"0","Mechanic":"0","Restaurant":"0","ParkSpot":"0","ATM":"0"}]'; // Just assign pre-assumed facilities. This behavior will be changed in the future.
 	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";

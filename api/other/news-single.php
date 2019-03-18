@@ -1,19 +1,19 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
-    $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
-	
-	// Mandatory
-    $stationID = $_POST['stationID'];
-	$userKey   = $_POST['AUTH_KEY'];
-	
+    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+
+    // Mandatory
+    $url = $_POST['url'];
+    $userKey = $_POST['AUTH_KEY'];
+
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
     }
-	
-	if (strlen($stationID) == 0 || $stationID == 0) {
-        echo "stationID required";
+
+    if (strlen($url) == 0) {
+        echo "url required";
         return;
     }
 
@@ -21,10 +21,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'u8276450_fuelspot');
-    
+
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $sql  = "SELECT * FROM finance WHERE stationID = '" . $stationID . "' ORDER BY date DESC LIMIT 0, 5";
-    
+    $sql = "SELECT * FROM news WHERE url = '" . $url . "'";
+
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {
         // check for empty result
@@ -35,6 +35,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo json_encode($myArray);
         }
     }
-	mysqli_close($conn);
+    mysqli_close($conn);
 }
 ?>
