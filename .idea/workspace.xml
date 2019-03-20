@@ -1,70 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fed30c55-db2b-444a-9890-4a105e7f771c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/answer-add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/answer-delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile-add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile-delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile-fetch-models.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile-update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/campaign-add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/campaign-delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/campaign-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/campaign-update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment-add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment-delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment-fetch-station.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment-update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/finance-fetch-prices.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/finance-fetch-station-prices.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/finance-fetch-volume.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other-banking.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other-company.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other-feedback.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other-news.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other-report.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other-streetview.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other-tax.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase-add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase-delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase-fetch-station.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase-fetch-user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase-update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station-add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station-search.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station-update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/superuser-create.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/superuser-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/superuser-update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user-create.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user-update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/admins/aykutuludag.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/automobiles/huseyinaykutuludag-06GC6515.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-06GC6515-1547853493.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-06GC6515-1547855485.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-06GC6515-1547865516.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/campaigns/paycell-shell.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1547926575.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1547926601.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/superusers/huseyinaykutuludag.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/users/aykutuludag.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/users/hakanince.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/users/hakanınce.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/users/huseyinaykutuludag.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/users/ugurbenli.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuelSpotAdminWeb/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FuelSpotAdminWeb/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuelSpotAdminWeb/.idea/my-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../FuelSpotAdminWeb/.idea/my-app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuelSpotAdminWeb/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FuelSpotAdminWeb/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuelSpotAdminWeb/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FuelSpotAdminWeb/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FuelSpotAdminWeb/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../FuelSpotAdminWeb/src/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="fed30c55-db2b-444a-9890-4a105e7f771c" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,31 +12,34 @@
     <session id="-46305016">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="1" />
+          <entry key="php" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="1" />
+          <entry key="PHP" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="php" value="2" />
+          <entry key="txt" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PHP" value="2" />
+          <entry key="PLAIN_TEXT" value="40" />
         </counts>
       </usages-collector>
     </session>
@@ -107,23 +47,33 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/automobile/add.php">
+        <entry file="file://$PROJECT_DIR$/api/admin/update.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
-            </state>
+            <state relative-caret-position="-816" />
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fuel-spot.com</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>fuelspot.com.tr</replace>
+    </replaceStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/api/automobile/add.php" />
+        <option value="$PROJECT_DIR$/api/admin/update.php" />
       </list>
     </option>
   </component>
@@ -135,11 +85,6 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/../FuelSpotAdminWeb/node_modules" />
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths>
-      <path value="$PROJECT_DIR$/../FuelSpotAdminWeb/package.json" />
-    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
@@ -153,6 +98,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,22 +106,10 @@
               <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
               <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="automobile" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -209,19 +143,35 @@
       <workItem from="1548730107610" duration="348000" />
       <workItem from="1548978663892" duration="263000" />
       <workItem from="1548978958864" duration="10000" />
+      <workItem from="1552914188847" duration="745000" />
     </task>
+    <task id="LOCAL-00001" summary="updated">
+      <created>1552914249562</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1552914249562</updated>
+    </task>
+    <task id="LOCAL-00002" summary="yeni alan adı: fuelspot.com.tr">
+      <created>1552914319270</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1552914319270</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="621000" />
+    <option name="totallyTimeSpent" value="1366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="GitLabIntegration" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -246,12 +196,26 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="updated" />
+    <MESSAGE value="yeni alan adı: fuelspot.com.tr" />
+    <option name="LAST_COMMIT_MESSAGE" value="yeni alan adı: fuelspot.com.tr" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/api/automobile/add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+        <state relative-caret-position="398">
+          <caret line="49" column="15" lean-forward="true" selection-start-line="49" selection-start-column="15" selection-end-line="49" selection-end-column="15" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/admin/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816" />
       </provider>
     </entry>
   </component>

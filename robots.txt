@@ -1,6 +1,4 @@
 User-Agent: *
-Allow: 
-Disallow: /admin
 Disallow: /api
 Disallow: /default_icons
 Disallow: /station_icons

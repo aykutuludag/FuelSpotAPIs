@@ -6,7 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Mandatory
     $url = $_POST['url'];
     $userKey = $_POST['AUTH_KEY'];
-
+	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     $sql = "SELECT * FROM news WHERE url = '" . $url . "'";
-
+    
     $result = $conn->query($sql) or die(mysqli_connect_error());
     if (!empty($result)) {
         // check for empty result
