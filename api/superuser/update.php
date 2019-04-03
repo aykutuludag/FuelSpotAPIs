@@ -13,7 +13,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gender   = $_POST['gender'];
     $birthday = $_POST['birthday'];
 	$phoneNumber = $_POST['phoneNumber'];
-    $location = $_POST['location'];
 	$country = $_POST['country'];
 	$language = $_POST['language'];
     $ownedStationIDs = $_POST['stationIDs'];
@@ -68,27 +67,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $var6 = " phoneNumber='$phoneNumber',";
         $sql  = $sql . $var6;
     }
-	
-    if (strlen($location) > 0) {
-        $var7 = " location = '$location',";
-        $sql  = $sql . $var7;
-    }
     
     if (strlen($country) > 0) {
-        $var8 = " country='$country',";
-        $sql  = $sql . $var8;
+        $var7 = " country='$country',";
+        $sql = $sql . $var7;
     }
     
     if (strlen($language) > 0) {
-        $var9 = " language='$language',";
-        $sql  = $sql . $var9;
+        $var8 = " language='$language',";
+        $sql = $sql . $var8;
     }
-	
-    if (strlen($ownedStationIDs) > 0) {
-        $var10 = " stations='$ownedStationIDs'";
-        $sql  = $sql . $var10;
-    }
-	
+
     if ($sql == "UPDATE users SET") {
         echo "At least 1 optional parameter required.";
         return;

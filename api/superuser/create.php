@@ -44,13 +44,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (!empty($result0)) {
         if (mysqli_num_rows($result0) > 0) {
-            // username exist
+            // user exist
             while ($row = $result0->fetch_array(MYSQL_ASSOC)) {
                 $myArray[] = $row;
             }
             echo json_encode($myArray);
         } else {
-            // username does not exist
+            // user does not exist
             $query1  = "INSERT INTO superusers(username,name,email,photo) VALUES ('$username','$name','$email','$photo')";
             $result1 = mysqli_query($conn, $query1);
 
@@ -62,9 +62,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $myArray2[] = $row;
                     }
                     echo json_encode($myArray2);
+                } else {
+                    echo "Error";
                 }
+            } else {
+                echo "Error";
             }
         }
+    } else {
+        echo "Error";
     }
     mysqli_close($conn);
 }
