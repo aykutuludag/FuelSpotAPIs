@@ -16,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $location = $_POST['location'];
 	$country = $_POST['country'];
 	$language = $_POST['language'];
-	$vehicles = $_POST['vehicles'];
 
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
@@ -83,16 +82,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (strlen($language) > 0) {
         $var9 = " language='$language',";
         $sql  = $sql . $var9;
-    }
-	
-    if (strlen($vehicles) > 0) {
-        $var10 = " vehicles='$vehicles',";
-        $sql  = $sql . $var10;
-    }
-	
-	if (strlen($favStations) > 0) {
-        $var11 = " favStations='$favStations',";
-        $sql  = $sql . $var11;
     }
 	
     if ($sql == "UPDATE users SET") {

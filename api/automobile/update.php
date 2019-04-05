@@ -4,6 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	// Mandatory
     $id  = $_POST['vehicleID'];
+    $username = $_POST['username'];
 	$userKey   = $_POST['AUTH_KEY'];
 	
 	// Optional but at least one required.
@@ -24,6 +25,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if (strlen($id) == 0 || $id == 0) {
         echo "vehicleID required";
+        return;
+    }
+
+    if (strlen($username) == 0) {
+        echo "username required";
         return;
     }
 	
