@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Mandatory
     $stationID = $_POST['stationID'];
     $userKey = $_POST['AUTH_KEY'];
-
+    
     // Optional but at least one required.
     $stationName      = $_POST['stationName'];
     $stationVicinity  = $_POST['stationVicinity'];

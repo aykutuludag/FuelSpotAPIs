@@ -39,38 +39,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
-    $query0 = "SELECT * FROM superusers WHERE username = '" . $username . "' AND email = '" . $email . "'";
+    $query0 = "SELECT * FROM superusers WHERE email = '" . $email . "'";
     $result0 = $conn->query($query0) or die(mysqli_connect_error());
-    
+
     if (!empty($result0)) {
         if (mysqli_num_rows($result0) > 0) {
-            // user exist
+            // email exist. return it.
             while ($row = $result0->fetch_array(MYSQL_ASSOC)) {
                 $myArray[] = $row;
             }
             echo json_encode($myArray);
         } else {
-            // user does not exist
-            $query1  = "INSERT INTO superusers(username,name,email,photo) VALUES ('$username','$name','$email','$photo')";
-            $result1 = mysqli_query($conn, $query1);
+            echo "Error";
+        }
+    } else {
+        // email does not exist. create and return it.
+        $query1 = "INSERT INTO superusers(username,name,email,photo) VALUES ('$username','$name','$email','$photo')";
+        $result1 = mysqli_query($conn, $query1);
 
-            $result2 = $conn->query($query0) or die(mysqli_connect_error());
-            
-            if (!empty($result2)) {
-                if (mysqli_num_rows($result2) > 0) {
-                    while ($row = $result2->fetch_array(MYSQL_ASSOC)) {
-                        $myArray2[] = $row;
-                    }
-                    echo json_encode($myArray2);
-                } else {
-                    echo "Error";
+        $result2 = $conn->query($query0) or die(mysqli_connect_error());
+
+        if (!empty($result2)) {
+            if (mysqli_num_rows($result2) > 0) {
+                while ($row = $result2->fetch_array(MYSQL_ASSOC)) {
+                    $myArray2[] = $row;
                 }
+                echo json_encode($myArray2);
             } else {
                 echo "Error";
             }
+        } else {
+            echo "Error";
         }
-    } else {
-        echo "Error";
     }
     mysqli_close($conn);
 }
