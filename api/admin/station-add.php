@@ -11,10 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $googleID = $_POST['googleID'];
     $logoURL = $_POST['logoURL'];
     $userKey = $_POST['AUTH_KEY'];
+    $facilities = '[{"WC":"1","Market":"1","CarWash":"1","TireRepair":"0","Mechanic":"0","Restaurant":"0","ParkSpot":"0","ATM":"0","Motel":"0"}]'; // Just assign pre-assumed facilities. This behavior will be changed in the future.
+    $outPutArray = [];
 
-    // Optional
-    $facilities = '[{"WC":"1","Market":"1","CarWash":"1","TireRepair":"0","Mechanic":"0","Restaurant":"0","ParkSpot":"0","ATM":"0"}]'; // Just assign pre-assumed facilities. This behavior will be changed in the future.
-	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
@@ -50,14 +49,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 
-    $myArray = array();
-	
     define('DB_USERNAME', 'u8276450_user');
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'u8276450_fuelspot');
 
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
     $sql = "INSERT INTO stations(name,vicinity,country,location,googleID,facilities,logoURL) VALUES('$name', '$vicinity', '$country', '$location', '$googleID', '$facilities', '$logoURL')";
     $result = mysqli_query($conn, $sql);
@@ -65,13 +65,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql2 = "SELECT * FROM stations WHERE googleID = '" . $googleID . "' AND isActive='1'";
     $result2 = $conn->query($sql2);
 
-    if (!empty($result2)) {
-        if (mysqli_num_rows($result2) > 0) {
-            while ($row = $result2->fetch_array(MYSQL_ASSOC)) {
-                array_push($myArray, $row);
-            }
-            echo json_encode($myArray);
+    if (mysqli_num_rows($result2) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            array_push($outPutArray, $row);
         }
+        echo json_encode($outPutArray);
     }
     mysqli_close($conn);
 }

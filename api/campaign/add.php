@@ -9,8 +9,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $campaignStart = $_POST['campaignStart'];
     $campaignEnd   = $_POST['campaignEnd'];
 	$userKey   = $_POST['AUTH_KEY'];
-	
-	// Optional
 	$campaignPhoto = $_POST['campaignPhoto'];
     
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
@@ -49,6 +47,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 	
     if ($campaignPhoto != null) {
         $actualpath = 'https://fuelspot.com.tr/uploads/campaigns/' . $stationID . '-' . $campaignName . '.jpg';

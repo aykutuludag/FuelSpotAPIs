@@ -4,9 +4,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Parameters
     $stationID = $_POST['stationID'];
-    $userKey = $_POST['AUTH_KEY'];
-    
-    // Optional but at least one required.
     $stationName      = $_POST['stationName'];
     $stationVicinity  = $_POST['stationVicinity'];
     $country          = $_POST['country'];
@@ -23,6 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hasMobilePayment = $_POST['mobilePayment'];
     $hasFuelDelivery  = $_POST['fuelDelivery'];
     $isActive         = $_POST['isActive'];
+    $userKey = $_POST['AUTH_KEY'];
     
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";

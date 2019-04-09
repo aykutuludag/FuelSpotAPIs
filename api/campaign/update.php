@@ -5,8 +5,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Parameters
 	$campaignID     = $_POST['campaignID'];
 	$userKey   = $_POST['AUTH_KEY'];
-	
-	// Optional but at least one required.
 	$campaignName  = $_POST['campaignName'];
     $campaignDesc  = $_POST['campaignDesc'];
     $campaignStart = $_POST['campaignStart'];
@@ -29,6 +27,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
     $sql  = "UPDATE campaigns SET";
     
 	if (strlen($campaignName) > 0) {

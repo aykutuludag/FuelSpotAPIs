@@ -7,7 +7,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $location = $_POST['location'];
     $radius = $_POST['radius'];
     $userKey = $_POST['AUTH_KEY'];
-	
+    $outPutArray = [];
+
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
@@ -30,19 +31,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $user_lat = explode(";", $location)[0];
     $user_lon = explode(";", $location)[1];
-    
+
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
     $sql = "SELECT *, ( 6371000 * acos( cos( radians('" . $user_lat . "') ) * cos( radians( SUBSTRING_INDEX(location, ';', 1) ) ) * cos( radians( SUBSTRING_INDEX(location, ';', -1) ) - radians('" . $user_lon . "') ) + sin( radians('" . $user_lat . "') ) * sin( radians( SUBSTRING_INDEX(location, ';', 1) ) ) ) ) AS distance FROM stations WHERE isActive='1' HAVING distance < '" . $radius . "' ORDER BY distance";
 
     $result = $conn->query($sql);
-    if (!empty($result)) {
-        // check for empty result
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = $result->fetch_array(MYSQL_ASSOC)) {
-                $myArray[] = $row;
-            }
-            echo json_encode($myArray);
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            $outPutArray[] = $row;
         }
+        echo json_encode($outPutArray);
     }
     mysqli_close($conn);
 }
