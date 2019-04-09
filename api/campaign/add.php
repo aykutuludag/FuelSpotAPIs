@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
-	
-	// Mandatory
+
+    // Parameters
 	$stationID     = $_POST['stationID'];
     $campaignName  = $_POST['campaignName'];
     $campaignDesc  = $_POST['campaignDesc'];
@@ -65,4 +65,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     mysqli_close($conn);
 }
-?>

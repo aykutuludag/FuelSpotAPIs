@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     $query0 = "SELECT * FROM users WHERE email = '" . $email . "'";
-    $result0 = $conn->query($query0) or die(mysqli_connect_error());
+    $result0 = $conn->query($query0);
 
     if (mysqli_num_rows($result0) > 0) {
         // email does exist. Return it.

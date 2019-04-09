@@ -3,7 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 
-    // Mandatory
+    // Parameters
     $name = $_POST['name'];
     $vicinity = $_POST['vicinity'];
     $country = $_POST['country'];
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result = mysqli_query($conn, $sql);
 
     $sql2 = "SELECT * FROM stations WHERE googleID = '" . $googleID . "' AND isActive='1'";
-    $result2 = $conn->query($sql2) or die(mysqli_connect_error());
+    $result2 = $conn->query($sql2);
 
     if (!empty($result2)) {
         if (mysqli_num_rows($result2) > 0) {
@@ -75,4 +75,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     mysqli_close($conn);
 }
-?>

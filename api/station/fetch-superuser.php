@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     $sql = "SELECT * FROM stations WHERE owner = '" . $superusername . "' AND isActive='1'";
 
-    $result = $conn->query($sql) or die(mysqli_connect_error());
+    $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $outPutArray[] = $row;

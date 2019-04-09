@@ -3,7 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 
-    // Mandatory
+    // Parameters
     $location = $_POST['location'];
     $radius = $_POST['radius'];
     $userKey = $_POST['AUTH_KEY'];
@@ -33,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     $sql = "SELECT *, ( 6371000 * acos( cos( radians('" . $user_lat . "') ) * cos( radians( SUBSTRING_INDEX(location, ';', 1) ) ) * cos( radians( SUBSTRING_INDEX(location, ';', -1) ) - radians('" . $user_lon . "') ) + sin( radians('" . $user_lat . "') ) * sin( radians( SUBSTRING_INDEX(location, ';', 1) ) ) ) ) AS distance FROM stations WHERE isActive='1' HAVING distance < '" . $radius . "' ORDER BY distance";
-	
-    $result = $conn->query($sql) or die(mysqli_connect_error());
+
+    $result = $conn->query($sql);
     if (!empty($result)) {
         // check for empty result
         if (mysqli_num_rows($result) > 0) {
@@ -46,4 +46,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     mysqli_close($conn);
 }
-?>

@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
-    
-    // Mandatory
+
+    // Parameters
     $username = $_POST['username'];
     $id       = $_POST['vehicleID'];
     $userKey  = $_POST['AUTH_KEY'];

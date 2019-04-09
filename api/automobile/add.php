@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
-    
-    // Mandatory
+
+    // Parameters
     $username  = $_POST['username'];
     $car_brand = $_POST['carBrand'];
     $car_model = $_POST['carModel'];
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     // Check plateNo exist
     $sql_plate = "SELECT * FROM automobiles WHERE plateNo = '" . $plate_no . "'";
-    $result_plate = $conn->query($sql_plate) or die(mysqli_connect_error());
+    $result_plate = $conn->query($sql_plate);
     if (!empty($result_plate)) {
         if (mysqli_num_rows($result_plate) > 0) {
             echo "plateNo exist";

@@ -1,13 +1,11 @@
 ﻿<?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
-    
-    // Mandatory
+
+    // Parameters
     $username = $_POST['username'];
     $message  = $_POST['message'];
     $userKey  = $_POST['AUTH_KEY'];
-    
-    // Optional
     $screenshot = $_POST['screenshot'];
     
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
@@ -31,6 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
     
     if ($screenshot != null) {
         $timeStamp  = time() . '.jpg';
@@ -48,4 +49,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     mysqli_close($conn);
 }
-?>

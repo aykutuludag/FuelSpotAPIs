@@ -2,10 +2,11 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
     $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
-	
-	// Mandatory
+
+    // Parameters
     $stationID = $_POST['stationID'];
 	$userKey   = $_POST['AUTH_KEY'];
+    $outPutArray = [];
 	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
@@ -23,18 +24,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
     $sql  = "SELECT * FROM purchases WHERE stationID = '" . $stationID . "' ORDER BY time DESC";
-    
-    $result = $conn->query($sql) or die(mysqli_connect_error());
+
+    $result = $conn->query($sql);
     if (!empty($result)) {
         // check for empty result
         if (mysqli_num_rows($result) > 0) {
-            while ($row = $result->fetch_array(MYSQL_ASSOC)) {
-                $myArray[] = $row;
+            while ($row = mysqli_fetch_assoc($result)) {
+                $outPutArray[] = $row;
             }
-            echo json_encode($myArray);
+            echo json_encode($outPutArray);
         }
     }
 	mysqli_close($conn);
 }
-?>

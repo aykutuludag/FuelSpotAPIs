@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
-	
-	// Mandatory
+
+    // Parameters
     $id            = $_POST['purchaseID'];
 	$username      = $_POST['username'];
 	$plateNO         = $_POST['plateNO'];
@@ -40,6 +40,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
     
     if (strlen($billPhoto) > 0) {
 		$timeStamp = time() . '.jpg';
@@ -56,4 +59,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     mysqli_close($conn);
 }
-?>
