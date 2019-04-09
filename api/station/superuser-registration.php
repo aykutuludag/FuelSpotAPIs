@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
-	
-    // Mandatory
+
+    // Parameters
     $stationID = $_POST['stationID'];
     $licenseNo = $_POST['licenseNo'];
     $owner     = $_POST['owner'];
@@ -34,6 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     define('DB_NAME', 'u8276450_fuelspot');
     
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
     $sql  = "UPDATE stations SET";
     
     if (strlen($licenseNo) > 0) {

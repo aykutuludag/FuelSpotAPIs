@@ -3,6 +3,45 @@
   <component name="ChangeListManager">
     <list default="true" id="fed30c55-db2b-444a-9890-4a105e7f771c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/bulk-campaign-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/bulk-campaign-fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/bulk-report-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/bulk-report-fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/bulk-station-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/bulk-station-fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/bulk-user-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/bulk-user-fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/station-add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/station-add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/station-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/station-search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/station-update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/station-update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/admin/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/admin/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/automobile/fetch-models.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/automobile/fetch-models.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/automobile/fetch-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/automobile/fetch-user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/automobile/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/automobile/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/campaign/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/campaign/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/campaign/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/campaign/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/campaign/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/campaign/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/comment/fetch-station.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/comment/fetch-station.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/comment/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/comment/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/finance/fetch-prices.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/finance/fetch-prices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/finance/fetch-station-prices.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/finance/fetch-station-prices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/finance/fetch-volume.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/finance/fetch-volume.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/other/banking.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/other/banking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/other/company.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/other/company.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/other/news-single.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/other/news-single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/other/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/other/news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/other/tax.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/other/tax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/purchase/fetch-automobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/purchase/fetch-automobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/purchase/fetch-station.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/purchase/fetch-station.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/purchase/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/purchase/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/station/fetch-superuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/station/fetch-superuser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/station/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/station/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/station/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/station/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/station/superuser-registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/station/superuser-registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/station/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/station/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/superuser/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/superuser/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/superuser/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/superuser/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/superuser/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/superuser/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/user/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/user/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/user/update.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,44 +53,46 @@
     <session id="-46305016">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
-          <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.6" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="php" value="12" />
+          <entry key="error_log" value="1" />
+          <entry key="php" value="54" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="12" />
+          <entry key="PHP" value="54" />
+          <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="16" />
-          <entry key="txt" value="105" />
+          <entry key="php" value="290" />
+          <entry key="txt" value="116" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="16" />
-          <entry key="PLAIN_TEXT" value="105" />
+          <entry key="PHP" value="290" />
+          <entry key="PLAIN_TEXT" value="116" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -77,6 +118,17 @@
       <list>
         <option value="$PROJECT_DIR$/api/automobile/add.php" />
         <option value="$PROJECT_DIR$/api/admin/update.php" />
+        <option value="$PROJECT_DIR$/api/user/update.php" />
+        <option value="$PROJECT_DIR$/api/superuser/fetch.php" />
+        <option value="$PROJECT_DIR$/api/user/fetch.php" />
+        <option value="$PROJECT_DIR$/api/superuser/update.php" />
+        <option value="$PROJECT_DIR$/api/superuser/create.php" />
+        <option value="$PROJECT_DIR$/api/user/create.php" />
+        <option value="$PROJECT_DIR$/api/station/fetch.php" />
+        <option value="$PROJECT_DIR$/api/station/fetch-superuser.php" />
+        <option value="$PROJECT_DIR$/api/station/search.php" />
+        <option value="$PROJECT_DIR$/api/station/superuser-registration.php" />
+        <option value="$PROJECT_DIR$/api/station/update.php" />
       </list>
     </option>
   </component>
@@ -88,6 +140,9 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/../FuelSpotAdminWeb/node_modules" />
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="207" />
@@ -101,7 +156,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -189,6 +243,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,6 +284,9 @@
       <workItem from="1554308312362" duration="18000" />
       <workItem from="1554431516804" duration="77000" />
       <workItem from="1554514600310" duration="67000" />
+      <workItem from="1554605656723" duration="51000" />
+      <workItem from="1554672646586" duration="77000" />
+      <workItem from="1554845344932" duration="2216000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1552914249562</created>
@@ -272,16 +330,23 @@
       <option name="project" value="LOCAL" />
       <updated>1554514652260</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="bugs fixed">
+      <created>1554605696161</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1554605696161</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2729000" />
+    <option name="totallyTimeSpent" value="5073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -302,6 +367,28 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835821" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="GitLabIntegration" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -315,7 +402,8 @@
     <MESSAGE value="yeni alan adı: fuelspot.com.tr" />
     <MESSAGE value="bug fixed" />
     <MESSAGE value="hata gidermeleri" />
-    <option name="LAST_COMMIT_MESSAGE" value="hata gidermeleri" />
+    <MESSAGE value="bugs fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugs fixed" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -330,13 +418,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/comment/fetch.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/station/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="45" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/admin/bulk-campaign-fetch.php">
       <provider selected="true" editor-type-id="text-editor" />
@@ -362,6 +443,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/other/tax.php">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/purchase/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-214" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/campaign/error_log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/superuser/fetch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/superuser/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-639">
+          <caret line="16" column="57" selection-start-line="16" selection-start-column="57" selection-end-line="16" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/user/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-877">
+          <caret line="9" column="31" lean-forward="true" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/user/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/user/fetch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="33" lean-forward="true" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/superuser/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/station/fetch-superuser.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="49" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/station/fetch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/station/update.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="741">
+          <caret line="99" column="24" selection-start-line="99" selection-start-column="24" selection-end-line="99" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/station/superuser-registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/station/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
