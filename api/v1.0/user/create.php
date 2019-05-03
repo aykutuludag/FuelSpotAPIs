@@ -52,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode($outPutArray);
     } else {
         // email does not exist. create and return it.
+        // BU NOKTADA username kontrolü yapılmalı. username var ise username1 yapılıp eklenecek.
         $query1 = "INSERT INTO users(username,name,email,photo) VALUES ('$username','$name','$email','$photo')";
         if (mysqli_query($conn, $query1)) {
             $fResult = $conn->query($query0);

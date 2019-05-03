@@ -1,29 +1,29 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 
     // Parameters
-    $id  = $_POST['vehicleID'];
+    $id = $_POST['vehicleID'];
     $username = $_POST['username'];
-	$userKey   = $_POST['AUTH_KEY'];
-	
-	// Optional but at least one required.
+    $userKey = $_POST['AUTH_KEY'];
+
+    // Optional but at least one required.
     $car_brand = $_POST['carBrand'];
     $car_model = $_POST['carModel'];
-    $fuel_pri  = $_POST['fuelPri'];
-    $fuel_sec  = $_POST['fuelSec'];
-    $car_km    = $_POST['kilometer'];
+    $fuel_pri = $_POST['fuelPri'];
+    $fuel_sec = $_POST['fuelSec'];
+    $car_km = $_POST['kilometer'];
     $car_photo = $_POST['carPhoto'];
-	$plateNo   = $_POST['plate'];
-	$avgCons   = $_POST['avgCons'];
-	$carbon    = $_POST['carbonEmission'];
+    $plateNo = $_POST['plate'];
+    $avgCons = $_POST['avgCons'];
+    $carbon = $_POST['carbonEmission'];
 
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
     }
-	
-	if (strlen($id) == 0 || $id == 0) {
+
+    if (strlen($id) == 0 || $id == 0) {
         echo "vehicleID required";
         return;
     }
@@ -32,77 +32,77 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "username required";
         return;
     }
-	
-	define('DB_USERNAME', 'u8276450_user');
+
+    define('DB_USERNAME', 'u8276450_user');
     define('DB_PASSWORD', '^2c4C4@c)KSl');
     define('DB_HOST', 'localhost');
     define('DB_NAME', 'u8276450_fuelspot');
-    
+
     $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
     if (!$conn) {
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql  = "UPDATE automobiles SET";
-    
-	if (strlen($car_brand) > 0) {
+    $sql = "UPDATE automobiles SET";
+
+    if (strlen($car_brand) > 0) {
         $var1 = " car_brand='$car_brand',";
-        $sql  = $sql . $var1;
+        $sql = $sql . $var1;
     }
-	
+
     if (strlen($car_model) > 0) {
         $var2 = " car_model='$car_model',";
-        $sql  = $sql . $var2;
+        $sql = $sql . $var2;
     }
-	
+
     if (strlen($fuel_pri) > 0) {
         $var3 = " fuelPri='$fuel_pri',";
-        $sql  = $sql . $var3;
+        $sql = $sql . $var3;
     }
-    
+
     if (strlen($fuel_sec) > 0) {
         $var4 = " fuelSec='$fuel_sec',";
-        $sql  = $sql . $var4;
+        $sql = $sql . $var4;
     }
-    
+
     if (strlen($car_km) > 0) {
         $var5 = " kilometer='$car_km',";
-        $sql  = $sql . $var5;
+        $sql = $sql . $var5;
     }
-	
-	if (strlen($car_photo) > 0) {
+
+    if (strlen($car_photo) > 0) {
         $actualpath = 'https://fuelspot.com.tr/uploads/automobiles/' . $username . '-' . $plateNo . '.jpg';
-		
+
         $var6 = " carPhoto='$actualpath',";
-        $sql  = $sql . $var6;
+        $sql = $sql . $var6;
 
         file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/automobiles/' . $username . '-' . $plateNo . '.jpg', base64_decode($car_photo));
     }
-	
+
     if (strlen($plateNo) > 0) {
         $var7 = " plateNo='$plateNo',";
-        $sql  = $sql . $var7;
+        $sql = $sql . $var7;
     }
-    
+
     if (strlen($avgCons) > 0) {
         $var8 = " avgConsumption='$avgCons',";
-        $sql  = $sql . $var8;
+        $sql = $sql . $var8;
     }
-    
+
     if (strlen($carbon) > 0) {
         $var9 = " carbonEmission='$carbon',";
-        $sql  = $sql . $var9;
+        $sql = $sql . $var9;
     }
-	
+
     if ($sql == "UPDATE automobiles SET") {
         echo "At least 1 optional parameter required.";
         return;
     } else {
-		$dummy = substr($sql, -1);
+        $dummy = substr($sql, -1);
         if (strcmp($dummy, ',') == 0) {
-          $sql=  substr_replace($sql, '', -1);
+            $sql = substr_replace($sql, '', -1);
         }
-        
+
         $sql = $sql . " WHERE id= '" . $id . "'";
 
         if ($conn->query($sql) === TRUE) {

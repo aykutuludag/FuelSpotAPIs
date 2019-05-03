@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 
     // Parameters
-    $country = $_POST['country'];
+    $stationID = $_POST['stationID'];
     $userKey = $_POST['AUTH_KEY'];
     $outPutArray = [];
 
@@ -13,8 +13,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 
-    if (strlen($country) == 0) {
-        echo "country required";
+    if (strlen($stationID) == 0 || $stationID == 0) {
+        echo "stationID required";
         return;
     }
 
@@ -28,14 +28,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM finance WHERE country = '" . $country . "' ORDER BY date DESC LIMIT 0, 75";
+    $sql = "SELECT * FROM purchases WHERE stationID = '" . $stationID . "' ORDER BY time DESC";
 
     $result = $conn->query($sql);
-    if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_assoc($result)) {
-            $outPutArray[] = $row;
+    if (!empty($result)) {
+        // check for empty result
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $outPutArray[] = $row;
+            }
+            echo json_encode($outPutArray);
         }
-        echo json_encode($outPutArray);
     }
     mysqli_close($conn);
 }

@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         die("Connection failed: " . mysqli_connect_error());
     }
 
-    $sql = "SELECT * FROM comments WHERE username = '" . $username . "' ORDER BY time ASC";
+    $sql = "SELECT * FROM comments WHERE username = '" . $username . "' ORDER BY time DESC";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {

@@ -1,0 +1,2 @@
+[31-Mar-2019 00:31:20 Etc/GMT-3] PHP Warning:  mysqli::mysqli(): (HY000/2002): Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (111 &quot;Connection refused&quot;) in /home/u8276450/fuelspot.com.tr/api/campaign/fetch.php on line 26
+[31-Mar-2019 00:31:20 Etc/GMT-3] PHP Warning:  mysqli::query(): Couldn't fetch mysqli in /home/u8276450/fuelspot.com.tr/api/campaign/fetch.php on line 29
