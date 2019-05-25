@@ -121,15 +121,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $actualpath = '';
     }
 
-    define('DB_USERNAME', 'u8276450_user');
-    define('DB_PASSWORD', '^2c4C4@c)KSl');
-    define('DB_HOST', 'localhost');
-    define('DB_NAME', 'u8276450_fuelspot');
-
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+	require_once('../../credentials.php');
+	$conn = connectFSDatabase();
 
     $sql = "INSERT INTO purchases(username,vehicleID,plateNo,kilometer,stationID,stationName,stationLocation,stationIcon,fuelType,fuelPrice,fuelLiter,fuelTax,subTotal,fuelType2,fuelPrice2,fuelLiter2,fuelTax2,subTotal2,totalPrice,country,unit,currency,billPhoto) VALUES ('$username', '$vehicleID', '$plateNO', '$kilometer' , '$stationID', '$stationName', '$stationLocation', '$stationIcon', '$fuelType', '$fuelPrice', '$fuelLiter', '$fuelTax', '$subTotal', '$fuelType2', '$fuelPrice2', '$fuelLiter2', '$fuelTax2', '$subTotal2', '$totalPrice', '$country', '$unit', '$currency', '$actualpath')";
 

@@ -24,18 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 
-    define('DB_USERNAME', 'u8276450_user');
-    define('DB_PASSWORD', '^2c4C4@c)KSl');
-    define('DB_HOST', 'localhost');
-    define('DB_NAME', 'u8276450_fuelspot');
+	require_once('../../credentials.php');
+	$conn = connectFSDatabase();
 
     $user_lat = explode(";", $location)[0];
     $user_lon = explode(";", $location)[1];
-
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
 
     $sql = "SELECT *, ( 6371000 * acos( cos( radians('" . $user_lat . "') ) * cos( radians( SUBSTRING_INDEX(location, ';', 1) ) ) * cos( radians( SUBSTRING_INDEX(location, ';', -1) ) - radians('" . $user_lon . "') ) + sin( radians('" . $user_lat . "') ) * sin( radians( SUBSTRING_INDEX(location, ';', 1) ) ) ) ) AS distance FROM stations WHERE isActive='1' HAVING distance < '" . $radius . "' ORDER BY distance";
 

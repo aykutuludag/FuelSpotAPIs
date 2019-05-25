@@ -31,15 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 
-    define('DB_USERNAME', 'u8276450_user');
-    define('DB_PASSWORD', '^2c4C4@c)KSl');
-    define('DB_HOST', 'localhost');
-    define('DB_NAME', 'u8276450_fuelspot');
-
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+	require_once('../../credentials.php');
+	$conn = connectFSDatabase();
 
     $query0 = "SELECT * FROM users WHERE email = '" . $email . "'";
     $result0 = $conn->query($query0);
@@ -52,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode($outPutArray);
     } else {
         // email does not exist. create and return it.
-        // BU NOKTADA username kontrolü yapılmalı. username var ise username1 yapılıp eklenecek.
+		// BU NOKTADA username kontrolü yapılmalı. username var ise username1 yapılıp eklenecek.
         $query1 = "INSERT INTO users(username,name,email,photo) VALUES ('$username','$name','$email','$photo')";
         if (mysqli_query($conn, $query1)) {
             $fResult = $conn->query($query0);

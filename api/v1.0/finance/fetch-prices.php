@@ -18,17 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 
-    define('DB_USERNAME', 'u8276450_user');
-    define('DB_PASSWORD', '^2c4C4@c)KSl');
-    define('DB_HOST', 'localhost');
-    define('DB_NAME', 'u8276450_fuelspot');
+	require_once('../../credentials.php');
+	$conn = connectFSDatabase();
 
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    $sql = "SELECT * FROM finance WHERE country = '" . $country . "' ORDER BY date DESC LIMIT 0, 50";
+    $sql = "SELECT * FROM finance WHERE country = '" . $country . "' ORDER BY date DESC LIMIT 50";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {

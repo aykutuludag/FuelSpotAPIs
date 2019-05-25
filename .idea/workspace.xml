@@ -1,120 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fed30c55-db2b-444a-9890-4a105e7f771c" name="Default Changelist" comment="api versiyon sistemine geçildi.">
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-campaign-fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-report-fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-station-fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-user-fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/station-add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/station-search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/station-update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/automobile/add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/automobile/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/automobile/fetch-models.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/automobile/fetch-user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/automobile/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/campaign/add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/campaign/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/campaign/error_log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/campaign/fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/campaign/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/comment/add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/comment/answer/add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/comment/answer/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/comment/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/comment/fetch-station.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/comment/fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/comment/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/finance/fetch-prices.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/finance/fetch-station-prices.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/finance/fetch-volume.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/banking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/company.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/feedback.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/news-single.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/news.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/report.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/streetview.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/tax.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/purchase/add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/purchase/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/purchase/fetch-automobile.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/purchase/fetch-station.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/purchase/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/station/fetch-superuser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/station/fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/station/search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/station/superuser-registration.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/station/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/superuser/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/superuser/fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/superuser/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/user/create.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/user/fetch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/user/update.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/default_icons/campaign.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/default_icons/news.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/default_icons/station.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/reports/index.html" afterDir="false" />
+    <list default="true" id="fed30c55-db2b-444a-9890-4a105e7f771c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/credentials.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/v1.0/campaign/fetch-old.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/v1.0/other/order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/default_icons/haber_diger.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/default_icons/haber_indirim.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/default_icons/haber_zam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/admins/aykutuludag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/admins/caglarsanliturk.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/automobiles/abdullahisiksoy-06HE2163.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/automobiles/hakanince-34AKD218.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/automobiles/huseyinaykutuludag-06GC6515.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/automobiles/huseyinaykutuludag-DHHS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/automobiles/huseyinaykutuludag-TEST.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/automobiles/ugurbenli-06GH619.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-06GC6515-1557091833.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-06GC6515-1557438900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-06GC6515-1557780025.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-06GC6515-1558045246.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-DHHS-1557094272.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/bills/huseyinaykutuludag-DHHS-1557256923.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/campaigns/267-sjfklsdf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/campaigns/267-test ajkd ajsd klasjd.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/campaigns/267-test ajkd ajsd klasjd1 31 3 123.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/campaigns/267-test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/campaigns/283-Nestle 1 tl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/campaigns/283-bic çakmak 1 tl.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/feedback/huseyinaykutuludag-1558397770.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/news/aytemiz-self-servis.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/news/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/news/shell-yenilenebilir-enerji.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/fatihsinanyaman-1556366689.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/fatihsinanyaman-1556367443.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/fatihsinanyaman-1556367565.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556406053.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556406164.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556480342.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556481500.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556700221.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556830658.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556902219.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556956302.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1556997359.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1557009260.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1557009501.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1557011271.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/gokhantaskan-1557125210.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/grandmount-1557362690.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/grandmount-1557362701.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/grandmount-1557362920.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/grandmount-1558224675.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/grandmount-1558224875.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/grandmount-1558224965.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1553104262.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1553104285.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1553104298.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1555279169.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1556032095.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1557538278.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/reports/huseyinaykutuludag-1557538382.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/superusers/fatihsinanyaman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/superusers/gknt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/superusers/grandmount.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/superusers/huseyinaykutuludag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/users/fatihsinanyaman.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/users/gknt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/users/gokhantaskan.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/users/grandmount.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/users/hakanince.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/users/huseyinaykutuludag.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/users/ugurbenli.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/bulk-campaign-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/bulk-report-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/bulk-station-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/bulk-user-fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/station-add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/station-search.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/station-update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/admin/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile/add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile/delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile/fetch-models.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile/fetch-user.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/automobile/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/campaign/add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/campaign/delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/campaign/fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/campaign/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment/add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment/answer/add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment/answer/delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment/delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment/fetch-station.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment/fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/comment/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/finance/fetch-prices.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/finance/fetch-station-prices.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/finance/fetch-volume.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other/banking.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other/company.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other/feedback.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other/news-single.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other/news.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other/report.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other/streetview.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/other/tax.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase/add.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase/delete.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase/fetch-automobile.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase/fetch-station.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/purchase/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station/fetch-superuser.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station/fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station/search.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station/superuser-registration.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/station/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/superuser/create.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/superuser/fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/superuser/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user/create.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user/fetch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/user/update.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/default_icons/automobile.png" beforeDir="false" afterPath="$PROJECT_DIR$/default_icons/automobile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default_icons/profile.png" beforeDir="false" afterPath="$PROJECT_DIR$/default_icons/profile.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/default_icons/station.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/bulk-campaign-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-campaign-fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/bulk-report-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-report-fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/bulk-station-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-station-fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/bulk-user-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-user-fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/station-add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/station-add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/station-search.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/station-search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/station-update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/station-update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/automobile/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/automobile/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/automobile/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/automobile/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/automobile/fetch-models.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/automobile/fetch-models.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/automobile/fetch-user.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/automobile/fetch-user.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/automobile/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/automobile/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/campaign/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/campaign/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/campaign/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/campaign/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/campaign/error_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/campaign/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/campaign/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/campaign/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/campaign/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/answer/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/answer/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/answer/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/answer/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/fetch-station.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/fetch-station.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/finance/fetch-prices.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/finance/fetch-prices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/finance/fetch-station-prices.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/finance/fetch-station-prices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/finance/fetch-volume.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/other/banking.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/other/banking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/other/company.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/other/company.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/other/feedback.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/other/feedback.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/other/news-single.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/other/news-single.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/other/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/other/news.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/other/report.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/other/report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/other/streetview.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/other/tax.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/other/tax.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/purchase/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/purchase/add.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/purchase/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/purchase/delete.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/purchase/fetch-automobile.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/purchase/fetch-automobile.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/purchase/fetch-station.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/purchase/fetch-station.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/purchase/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/purchase/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/station/fetch-superuser.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/station/fetch-superuser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/station/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/station/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/station/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/station/search.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/station/superuser-registration.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/station/superuser-registration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/station/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/station/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/superuser/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/superuser/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/superuser/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/superuser/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/superuser/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/superuser/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/user/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/user/create.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/user/fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/user/fetch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/user/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/user/update.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,27 +139,28 @@
     <session id="-46305016">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="15" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.closed" value="18" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.6" value="5" />
+          <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="16" />
+          <entry key="project.opened" value="19" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="error_log" value="1" />
-          <entry key="php" value="193" />
+          <entry key="php" value="194" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="193" />
+          <entry key="PHP" value="194" />
           <entry key="PLAIN_TEXT" value="1" />
         </counts>
       </usages-collector>
@@ -165,7 +179,13 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/v1.0/admin/bulk-station-fetch.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -252,11 +272,13 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/../FuelSpotAdminWeb/node_modules" />
-  </component>
   <component name="PhpServers">
     <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="" />
+    </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="207" />
@@ -264,7 +286,9 @@
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -290,32 +314,7 @@
             </path>
             <path>
               <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
-              <item name="default_icons" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-              <item name="superusers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
-              <item name="uploads" type="462c0819:PsiDirectoryNode" />
-              <item name="users" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -330,6 +329,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -373,7 +373,10 @@
       <workItem from="1554845344932" duration="5258000" />
       <workItem from="1555277688761" duration="708000" />
       <workItem from="1556848358633" duration="62000" />
-      <workItem from="1556848443729" duration="536000" />
+      <workItem from="1556848443729" duration="838000" />
+      <workItem from="1557005413667" duration="15000" />
+      <workItem from="1558823571326" duration="142000" />
+      <workItem from="1558823739905" duration="644000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1552914249562</created>
@@ -445,16 +448,23 @@
       <option name="project" value="LOCAL" />
       <updated>1554850512430</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="api versiyon sistemine geçildi.">
+      <created>1556849089165</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556849089166</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9421000" />
+    <option name="totallyTimeSpent" value="10524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29317698" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30277187" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -515,13 +525,13 @@
     <MESSAGE value="station, superuser, user apileri düzeltildi çalışma devam ediyor." />
     <MESSAGE value="purchase, other, finance, comment-answer apileri düzeltildi çalışma devam ediyor." />
     <MESSAGE value="hatalar giderildi." />
-    <option name="LAST_COMMIT_MESSAGE" value="hatalar giderildi." />
+    <MESSAGE value="api versiyon sistemine geçildi." />
+    <option name="LAST_COMMIT_MESSAGE" value="api versiyon sistemine geçildi." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/superuser/update.php" />
     <entry file="file://$PROJECT_DIR$/api/user/update.php" />
     <entry file="file://$PROJECT_DIR$/api/user/fetch.php" />
     <entry file="file://$PROJECT_DIR$/api/superuser/create.php" />
@@ -572,5 +582,8 @@
     <entry file="file://$PROJECT_DIR$/api/admin/update.php" />
     <entry file="file://$PROJECT_DIR$/api/admin/station-search.php" />
     <entry file="file://$PROJECT_DIR$/api/campaign/delete.php" />
+    <entry file="file://$PROJECT_DIR$/api/v1.0/admin/bulk-station-fetch.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
   </component>
 </project>

@@ -1,34 +1,27 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    $AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 
     // Parameters
     $stationID = $_POST['stationID'];
-    $userKey = $_POST['AUTH_KEY'];
+	$userKey   = $_POST['AUTH_KEY'];
     $outPutArray = [];
-
+	
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
         echo "AuthError";
         return;
     }
-
-    if (strlen($stationID) == 0 || $stationID == 0) {
+	
+	if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
         return;
     }
 
-    define('DB_USERNAME', 'u8276450_user');
-    define('DB_PASSWORD', '^2c4C4@c)KSl');
-    define('DB_HOST', 'localhost');
-    define('DB_NAME', 'u8276450_fuelspot');
+	require_once('../../credentials.php');
+	$conn = connectFSDatabase();
 
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    $sql = "SELECT * FROM purchases WHERE stationID = '" . $stationID . "' ORDER BY time DESC";
+    $sql  = "SELECT * FROM purchases WHERE stationID = '" . $stationID . "' ORDER BY time DESC";
 
     $result = $conn->query($sql);
     if (!empty($result)) {
@@ -40,5 +33,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo json_encode($outPutArray);
         }
     }
-    mysqli_close($conn);
+	mysqli_close($conn);
 }

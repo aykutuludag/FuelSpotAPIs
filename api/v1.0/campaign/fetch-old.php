@@ -4,8 +4,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 
     // Parameters
-    $country = $_POST['country'];
+    $sID = $_POST['stationID'];
     $userKey = $_POST['AUTH_KEY'];
+    $date = date('Y-m-d H:i:s');
     $outPutArray = [];
 
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
@@ -13,22 +14,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         return;
     }
 
-    if (strlen($country) == 0) {
+    if (strlen($sID) == 0 || $sID == 0) {
         echo "stationID required";
         return;
     }
 
-    define('DB_USERNAME', 'u8276450_user');
-    define('DB_PASSWORD', '^2c4C4@c)KSl');
-    define('DB_HOST', 'localhost');
-    define('DB_NAME', 'u8276450_fuelspot');
-
-    $conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
-    $sql = "SELECT time, totalPrice FROM purchases WHERE country = '" . $country . "' AND isVerified=1 ORDER BY time DESC LIMIT 0, 50";
+	require_once('../../credentials.php');
+	$conn = connectFSDatabase();
+    $sql = "SELECT * FROM campaigns WHERE stationID = '" . $sID . "' AND campaignEnd < '" . $date . "' ORDER BY campaignStart DESC";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {
