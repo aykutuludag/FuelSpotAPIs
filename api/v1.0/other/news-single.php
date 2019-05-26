@@ -1,11 +1,11 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     header('Content-Type: application/json');
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 
     // Parameters
-    $url = $_POST['url'];
-    $userKey = $_POST['AUTH_KEY'];
+    $url = $_GET['url'];
+    $userKey = $_GET['AUTH_KEY'];
     $outPutArray = [];
 
     if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {

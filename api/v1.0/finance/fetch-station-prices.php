@@ -1,5 +1,5 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     header('Content-Type: application/json');
     $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
 
