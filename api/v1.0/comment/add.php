@@ -1,19 +1,13 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
 
     // Parameters
     $comment = $_POST['comment'];
     $station_id = $_POST['stationID'];
     $username = $_POST['username'];
     $userStars = $_POST['stars'];
-    $userKey = $_POST['AUTH_KEY'];
     $userphoto = $_POST['user_photo'];
-
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
 
     if (strlen($comment) == 0) {
         echo "comment required";

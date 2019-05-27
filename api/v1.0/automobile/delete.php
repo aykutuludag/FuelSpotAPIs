@@ -1,16 +1,10 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
 
     // Parameters
     $username = $_POST['username'];
     $id       = $_POST['vehicleID'];
-    $userKey  = $_POST['AUTH_KEY'];
-    
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
     
     if (strlen($username) == 0) {
         echo "username required";

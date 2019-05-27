@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
 
     // Parameters
     $name = $_POST['name'];
@@ -10,14 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $location = $_POST['location'];
     $googleID = $_POST['googleID'];
     $logoURL = $_POST['logoURL'];
-    $userKey = $_POST['AUTH_KEY'];
     $facilities = '[{"WC":"1","Market":"1","CarWash":"1","TireRepair":"0","Mechanic":"0","Restaurant":"0","ParkSpot":"0","ATM":"0","Motel":"0"}]'; // Just assign pre-assumed facilities. This behavior will be changed in the future.
     $outPutArray = [];
-
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
 
     if (strlen($name) == 0) {
         echo "name required";

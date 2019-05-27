@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
 
     // Parameters
     $username = $_POST['username'];
@@ -9,16 +9,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $plate_no = $_POST['plateNo'];
     $fuel_pri = $_POST['fuelPri'];
     $car_km = $_POST['kilometer'];
-    $userKey = $_POST['AUTH_KEY'];
 
     // Optional
     $fuel_sec = $_POST['fuelSec'];
     $car_photo = $_POST['carPhoto'];
-
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
 
     if (strlen($username) == 0) {
         echo "username required";

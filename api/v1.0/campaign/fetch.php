@@ -1,18 +1,12 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     header('Content-Type: application/json');
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
 
     // Parameters
     $sID = $_GET['stationID'];
-    $userKey = $_GET['AUTH_KEY'];
     $date = date('Y-m-d H:i:s');
     $outPutArray = [];
-
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
 
     if (strlen($sID) == 0 || $sID == 0) {
         echo "stationID required";

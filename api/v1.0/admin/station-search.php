@@ -1,18 +1,12 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     header('Content-Type: application/json');
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
 
     // Parameters
     $location = $_GET['location'];
     $radius = $_GET['radius'];
-    $userKey = $_GET['AUTH_KEY'];
     $outPutArray = [];
-
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
 
     if (strlen($location) == 0) {
         echo "location required";

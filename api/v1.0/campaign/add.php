@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-	$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
 
     // Parameters
 	$stationID     = $_POST['stationID'];
@@ -10,11 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $campaignEnd   = $_POST['campaignEnd'];
 	$userKey   = $_POST['AUTH_KEY'];
 	$campaignPhoto = $_POST['campaignPhoto'];
-    
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
 	
 	if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";

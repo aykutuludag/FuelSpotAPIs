@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
     
     // Parameters
     $username = $_POST['username'];
@@ -13,13 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email    = $_POST['email'];
 	$currency = $_POST['currency'];
 	$country   = $_POST['country'];
-    $userKey  = $_POST['AUTH_KEY'];
-    
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
-    
+
     if (strlen($username) == 0) {
         echo "username required";
         return;

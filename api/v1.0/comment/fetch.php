@@ -1,17 +1,11 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     header('Content-Type: application/json');
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
 
     // Parameters
     $username = $_GET['username'];
-    $userKey = $_GET['AUTH_KEY'];
     $outPutArray = [];
-
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
 
     if (strlen($username) == 0) {
         echo "username required";

@@ -1,23 +1,17 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $AUTH_KEY = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';
+    include('../../token-validator.php');
     
     // Parameters
     $stationID     = $_POST['stationID'];
     $stationName   = $_POST['stationName'];
     $country       = $_POST['country'];
-    $userKey       = $_POST['AUTH_KEY'];
     $address       = $_POST['address'];
     $facilities    = $_POST['facilities'];
     $gasolinePrice = $_POST['gasolinePrice'];
     $dieselPrice   = $_POST['dieselPrice'];
     $LPGPrice      = $_POST['lpgPrice'];
     $elecPrice     = $_POST['electricityPrice'];
-    
-    if (strlen($userKey) == 0 || $userKey != $AUTH_KEY) {
-        echo "AuthError";
-        return;
-    }
     
     if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
