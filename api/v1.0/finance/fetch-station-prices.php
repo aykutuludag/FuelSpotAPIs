@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     include('../../token-validator.php');
 
     // Parameters
-    $stationID = $_POST['stationID'];
+    $stationID = $_GET['stationID'];
     $outPutArray = [];
 
     if (strlen($stationID) == 0 || $stationID == 0) {

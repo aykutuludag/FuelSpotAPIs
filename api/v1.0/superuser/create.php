@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $photo = $_POST['photo'];
+	$deviceType = $_POST['deviceType'];
     $tempArray = [];
     $outPutArray = [];
 
@@ -22,6 +23,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($email) == 0) {
         echo "email required";
+        return;
+    }
+	
+	if (strlen($deviceType) == 0) {
+        echo "deviceType required";
         return;
     }
 

@@ -18,7 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {
-        while ($row = $result->fetch_array(MYSQL_ASSOC)) {
+        while ($row = mysqli_fetch_assoc($result)) {
             $myArray[] = $row;
         }
         echo json_encode($myArray);
