@@ -1,17 +1,24 @@
 <?php
 require_once('php-jwt/JWT.php');
 $t = time();
-if ($deviceType == "mobile") {
+if ($deviceType == "android") {
     $token = array(
         "iss" => "https://fuelspot.com.tr",
-        "aud" => "webApp",
+        "aud" => "FSAndroid",
         "iat" => $t,
         'user_id' => $outPutArray[0]['id'],
     );
-} else if ($deviceType == "desktop") {
+} else if ($deviceType == "ios") {
     $token = array(
         "iss" => "https://fuelspot.com.tr",
-        "aud" => "webApp",
+        "aud" => "FSiOS",
+        "iat" => $t,
+        'user_id' => $outPutArray[0]['id'],
+    );
+} else {
+    $token = array(
+        "iss" => "https://fuelspot.com.tr",
+        "aud" => "FSWeb",
         "iat" => $t,
         "exp" => $t + 604800,
         'user_id' => $outPutArray[0]['id'],
