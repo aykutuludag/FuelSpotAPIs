@@ -4,6 +4,10 @@
     <list default="true" id="fed30c55-db2b-444a-9890-4a105e7f771c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/token-creator.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/token-creator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/token-validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/token-validator.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/station-update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/station-update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/update.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,8 +19,8 @@
     <session id="-46305016">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
-          <entry key="project.open.time.0" value="5" />
+          <entry key="project.closed" value="28" />
+          <entry key="project.open.time.0" value="7" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.2" value="1" />
@@ -26,47 +30,40 @@
           <entry key="project.open.time.6" value="8" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="29" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="error_log" value="1" />
-          <entry key="php" value="453" />
+          <entry key="error_log" value="2" />
+          <entry key="php" value="461" />
+          <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PHP" value="453" />
-          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Image" value="1" />
+          <entry key="PHP" value="461" />
+          <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="1212" />
-          <entry key="txt" value="383" />
+          <entry key="error_log" value="1" />
+          <entry key="php" value="1235" />
+          <entry key="txt" value="394" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="1212" />
-          <entry key="PLAIN_TEXT" value="383" />
+          <entry key="PHP" value="1235" />
+          <entry key="PLAIN_TEXT" value="395" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/token-creator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -99,8 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/api/v1.0/superuser/update.php" />
-        <option value="$PROJECT_DIR$/api/v1.0/user/update.php" />
         <option value="$PROJECT_DIR$/api/v1.0/user/fetch.php" />
         <option value="$PROJECT_DIR$/api/v1.0/superuser/fetch.php" />
         <option value="$PROJECT_DIR$/api/v1.0/station/update.php" />
@@ -150,6 +145,8 @@
         <option value="$PROJECT_DIR$/api/v1.0/admin/bulk-report-fetch.php" />
         <option value="$PROJECT_DIR$/api/v1.0/admin/login.php" />
         <option value="$PROJECT_DIR$/api/token-creator.php" />
+        <option value="$PROJECT_DIR$/api/token-validator.php" />
+        <option value="$PROJECT_DIR$/api/v1.0/automobile/error_log" />
       </list>
     </option>
   </component>
@@ -197,7 +194,22 @@
             <path>
               <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
               <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
-              <item name="default_icons" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
@@ -219,13 +231,13 @@
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Applications\FuelSpotAPIs" />
-      <recent name="D:\Applications\FuelSpotAPIs\uploads\superusers" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Applications\FuelSpotAPIs\api" />
       <recent name="D:\Applications\FuelSpotAPIs" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Applications\FuelSpotAPIs" />
+      <recent name="D:\Applications\FuelSpotAPIs\uploads\superusers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -276,7 +288,9 @@
       <workItem from="1558958825631" duration="3993000" />
       <workItem from="1558964743479" duration="1097000" />
       <workItem from="1558968438708" duration="158000" />
-      <workItem from="1559046792282" duration="507000" />
+      <workItem from="1559046792282" duration="717000" />
+      <workItem from="1559071758418" duration="947000" />
+      <workItem from="1559082812914" duration="425000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1552914249562</created>
@@ -383,17 +397,23 @@
       <option name="project" value="LOCAL" />
       <updated>1558968571773</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="bug fixing">
+      <created>1559047499156</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1559047499156</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29182000" />
+    <option name="totallyTimeSpent" value="30764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.32995737" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33742005" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,33 +479,13 @@
     <MESSAGE value="daha güvenli bir versyion" />
     <MESSAGE value="POST, GET ayrımı yapıldı. sırada token var" />
     <MESSAGE value="firebase jwt entegre edildi." />
-    <option name="LAST_COMMIT_MESSAGE" value="firebase jwt entegre edildi." />
+    <MESSAGE value="bug fixing" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug fixing" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/v1.0/superuser/update.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1.0/superuser/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1.0/station/fetch-superuser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/v1.0/station/search.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -801,22 +801,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/credentials.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/v1.0/user/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" selection-start-line="44" selection-end-line="46" selection-end-column="39" />
+        <state relative-caret-position="24">
+          <caret line="20" column="15" lean-forward="true" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/credentials.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/api/token-validator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/token-creator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1.0/automobile/error_log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/default_icons/news.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>

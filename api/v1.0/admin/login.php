@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Parameters
     $username = $_POST['username'];
     $password = $_POST['password'];
+	$deviceType = $_POST['deviceType'];
     $tempArray = [];
     $outPutArray = [];
 

@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
+	$sql  = "UPDATE admins SET";
 
     if (strlen($name) > 0) {
         $var1 = " name='$name',";

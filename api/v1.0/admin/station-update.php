@@ -17,8 +17,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $licenseNo        = $_POST['licenseNo'];
     $owner            = $_POST['owner'];
     $isVerified       = $_POST['isVerified'];
-    $hasMobilePayment = $_POST['mobilePayment'];
-    $hasFuelDelivery  = $_POST['fuelDelivery'];
     $isActive         = $_POST['isActive'];
     
     if (strlen($stationID) == 0 || $stationID == 0) {
@@ -113,19 +111,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql   = $sql . $var12;
     }
     
-    if (strlen((string) $hasMobilePayment) > 0) {
-        $var13 = " isMobilePaymentAvailable='$hasMobilePayment',";
-        $sql   = $sql . $var13;
-    }
-    
-    if (strlen((string) $hasFuelDelivery) > 0) {
-        $var14 = " isDeliveryAvailable='$hasFuelDelivery',";
-        $sql   = $sql . $var14;
-    }
-    
     if (strlen((string) $isActive) > 0) {
-        $var15 = " isActive='$isActive'";
-        $sql   = $sql . $var15;
+        $var13 = " isActive='$isActive'";
+        $sql   = $sql . $var13;
     }
     
     if ($sql == "UPDATE stations SET") {
