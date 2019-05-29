@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (strlen($superusername) == 0) {
         echo "superusername required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

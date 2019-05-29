@@ -29,82 +29,82 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($vehicleID) == 0 || $vehicleID == 0) {
         echo "vehicleID required";
-        return;
+        exit;
     }
 
     if (strlen($plateNO) == 0) {
         echo "plateNO required";
-        return;
+        exit;
     }
 
     if (strlen($kilometer) == 0 || $kilometer == 0) {
         echo "kilometer required";
-        return;
+        exit;
     }
 
     if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
-        return;
+        exit;
     }
 
     if (strlen($stationName) == 0) {
         echo "stationNAME required";
-        return;
+        exit;
     }
 
     if (strlen($stationLocation) == 0) {
         echo "stationLOC required";
-        return;
+        exit;
     }
 
     if (strlen($stationIcon) == 0) {
         echo "stationICON required";
-        return;
+        exit;
     }
 
     if (strlen($fuelType) == 0 || $fuelType == -1) {
         echo "fuelType required";
-        return;
+        exit;
     }
 
     if (strlen($fuelPrice) == 0) {
         echo "fuelPrice required";
-        return;
+        exit;
     }
 
     if (strlen($fuelLiter) == 0) {
         echo "fuelLiter required";
-        return;
+        exit;
     }
 
     if (strlen($fuelTax) == 0) {
         echo "fuelTax required";
-        return;
+        exit;
     }
 
     if (strlen($subTotal) == 0) {
         echo "subTotal required";
-        return;
+        exit;
     }
 
     if (strlen($totalPrice) == 0 || $totalPrice == 0) {
         echo "totalPrice required";
-        return;
+        exit;
     }
 
     if (strlen($country) == 0) {
         echo "country required";
-        return;
+        exit;
     }
 
     if (strlen($unit) == 0) {
         echo "unit required";
-        return;
+        exit;
     }
 
     if (strlen($currency) == 0) {
         echo "currency required";
-        return;
+        exit;
     }
 
     if ($billPhoto != null) {

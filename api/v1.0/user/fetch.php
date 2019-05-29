@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

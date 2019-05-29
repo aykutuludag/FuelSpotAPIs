@@ -10,22 +10,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	if (strlen($id) == 0 || $id == 0) {
         echo "purchaseID required";
-        return;
+        exit;
     }
 	
 	if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
 	
 	if (strlen($plateNO) == 0) {
         echo "plateNO required";
-        return;
+        exit;
     }
 	
 	if (strlen($billPhoto) == 0) {
         echo "billPhoto required";
-        return;
+        exit;
     }
 	
 	require_once('../../credentials.php');

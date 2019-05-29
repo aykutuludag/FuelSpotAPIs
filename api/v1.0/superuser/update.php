@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($sql == "UPDATE superusers SET") {
         echo "At least 1 optional parameter required.";
-        return;
+        exit;
     } else {
         $dummy = substr($sql, -1);
         if (strcmp($dummy, ',') == 0) {

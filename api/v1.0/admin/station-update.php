@@ -21,17 +21,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
-        return;
+        exit;
     }
     
     if (strlen($stationName) == 0) {
         echo "stationName required";
-        return;
+        exit;
     }
     
     if (strlen($country) == 0) {
         echo "country required";
-        return;
+        exit;
     }
 	
 	require_once('../../credentials.php');
@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if ($sql == "UPDATE stations SET") {
         echo "At least 1 optional parameter required.";
-        return;
+        exit;
     } else {
         $dummy = substr($sql, -1);
         if (strcmp($dummy, ',') == 0) {

@@ -12,17 +12,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
 
     if (strlen($station_id) == 0 || $station_id == 0) {
         echo "stationID required";
-        return;
+        exit;
     }
 
     if (strlen($report) == 0) {
         echo "report required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

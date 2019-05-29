@@ -11,22 +11,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($comment) == 0) {
         echo "comment required";
-        return;
+        exit;
     }
 
     if (strlen($station_id) == 0 || $station_id == 0) {
         echo "stationID required";
-        return;
+        exit;
     }
 
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
 
     if (strlen($userStars) == 0) {
         echo "stars required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

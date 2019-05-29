@@ -9,17 +9,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($commentID) == 0 || $commentID == 0) {
         echo "commentID required";
-        return;
+        exit;
     }
 
     if (strlen($answer) == 0) {
         echo "answer required";
-        return;
+        exit;
     }
 
     if (strlen($logo) == 0) {
         echo "logo required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

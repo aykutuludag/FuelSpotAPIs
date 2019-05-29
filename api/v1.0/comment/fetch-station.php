@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

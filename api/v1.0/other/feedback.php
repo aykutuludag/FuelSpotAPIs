@@ -9,12 +9,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
     
     if (strlen($message) == 0) {
         echo "message required";
-        return;
+        exit;
     }
     
 	require_once('../../credentials.php');

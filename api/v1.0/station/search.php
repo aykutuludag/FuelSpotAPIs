@@ -10,12 +10,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (strlen($location) == 0) {
         echo "location required";
-        return;
+        exit;
     }
 
     if (strlen($radius) == 0) {
         echo "radius required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

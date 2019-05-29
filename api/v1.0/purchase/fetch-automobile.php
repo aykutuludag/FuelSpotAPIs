@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (strlen($plateNo) == 0) {
         echo "plateNo required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

@@ -13,22 +13,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
 
     if (strlen($name) == 0) {
         echo "name required";
-        return;
+        exit;
     }
 
     if (strlen($email) == 0) {
         echo "email required";
-        return;
+        exit;
     }
 
     if (strlen($deviceType) == 0) {
         echo "deviceType required";
-        return;
+        exit;
     }
 
     require_once('../../credentials.php');

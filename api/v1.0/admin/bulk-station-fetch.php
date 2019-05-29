@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (strlen($country) == 0) {
         echo "country is required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

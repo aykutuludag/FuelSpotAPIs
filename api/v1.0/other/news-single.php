@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
     if (strlen($url) == 0) {
         echo "url required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

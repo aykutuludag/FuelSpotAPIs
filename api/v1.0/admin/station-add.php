@@ -15,32 +15,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($name) == 0) {
         echo "name required";
-        return;
+        exit;
     }
 
     if (strlen($vicinity) == 0) {
         echo "vicinity required";
-        return;
+        exit;
     }
 
     if (strlen($country) == 0) {
         echo "country required";
-        return;
+        exit;
     }
 
     if (strlen($location) == 0) {
         echo "location required";
-        return;
+        exit;
     }
 
     if (strlen($googleID) != 27) {
         echo "googleID is null or corrupt";
-        return;
+        exit;
     }
 
     if (strlen($logoURL) == 0) {
         echo "logoURL required";
-        return;
+        exit;
     }
 
 	require_once('../../credentials.php');

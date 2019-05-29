@@ -16,32 +16,32 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
 
     if (strlen($car_brand) == 0) {
         echo "carBrand required";
-        return;
+        exit;
     }
 
     if (strlen($car_model) == 0) {
         echo "carModel required";
-        return;
+        exit;
     }
 
     if (strlen($plate_no) == 0) {
         echo "plateNo required";
-        return;
+        exit;
     }
 
     if (strlen($fuel_pri) == 0 || $fuel_pri == -1) {
         echo "fuelPri required";
-        return;
+        exit;
     }
 
     if (strlen($car_km) == 0) {
         echo "kilometer required";
-        return;
+        exit;
     }
 
     if ($car_photo != null) {
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $result_plate = $conn->query($sql_plate);
     if (mysqli_num_rows($result_plate) > 0) {
         echo "plateNo exist";
-        return;
+        exit;
     }
 
     // Insert automobile

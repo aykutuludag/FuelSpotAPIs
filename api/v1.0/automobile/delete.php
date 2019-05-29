@@ -8,12 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
     
     if (strlen($id) == 0 || $id == 0) {
         echo "vehicleID required";
-        return;
+        exit;
     }
     
 	require_once('../../credentials.php');

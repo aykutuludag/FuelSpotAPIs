@@ -16,37 +16,37 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (strlen($username) == 0) {
         echo "username required";
-        return;
+        exit;
     }
     
     if (strlen($product) == 0) {
         echo "product required";
-        return;
+        exit;
     }
     
     if (strlen($price) == 0) {
         echo "price required";
-        return;
+        exit;
     }
     
     if (strlen($name) == 0) {
         echo "name required";
-        return;
+        exit;
     }
     
     if (strlen($address) == 0) {
         echo "address required";
-        return;
+        exit;
     }
     
     if (strlen($phone) == 0) {
         echo "phone required";
-        return;
+        exit;
     }
     
     if (strlen($email) == 0) {
         echo "email required";
-        return;
+        exit;
     }
     
 	require_once('../../credentials.php');

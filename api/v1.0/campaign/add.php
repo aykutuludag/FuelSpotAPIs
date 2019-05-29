@@ -13,27 +13,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
-        return;
+        exit;
     }
 	
 	if (strlen($campaignName) == 0) {
         echo "campaignName required";
-        return;
+        exit;
     }
 	
 	if (strlen($campaignDesc) == 0) {
         echo "campaignDesc required";
-        return;
+        exit;
     }
 	
 	if (strlen($campaignStart) == 0) {
         echo "campaignStart required";
-        return;
+        exit;
     }
 	
 	if (strlen($campaignEnd) == 0) {
         echo "campaignEnd required";
-        return;
+        exit;
     }
 	
 	require_once('../../credentials.php');
