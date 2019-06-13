@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
 
-    $sql = "SELECT * FROM news WHERE country = '" . $country . "' ORDER BY releaseDate DESC LIMIT 5";
+    $sql = "SELECT * FROM news WHERE country = '" . $country . "' ORDER BY releaseDate DESC LIMIT 6";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {

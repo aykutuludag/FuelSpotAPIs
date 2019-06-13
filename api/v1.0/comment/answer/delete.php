@@ -5,12 +5,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Parameters
     $commentID = $_POST['commentID'];
 
-    if (strlen($commentID) == 0 && $commentID == 0) {
+    if (strlen($commentID) == 0 || $commentID == 0) {
         echo "commentID required";
         exit;
     }
 
-	require_once('../../credentials.php');
+	require_once('../../../credentials.php');
 	$conn = connectFSDatabase();
 
     $sql = "UPDATE comments SET answer = '', replyTime = '', logo = '' WHERE id= '" . $commentID . "'";

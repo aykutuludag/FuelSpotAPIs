@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $outPutArray = [];
 
     if (strlen($username) == 0) {
-        echo "usernam required";
+        echo "username required";
         exit;
     }
 

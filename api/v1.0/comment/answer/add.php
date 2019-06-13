@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    include('..//../../token-validator.php');
+    include('../../../token-validator.php');
 
     // Parameters
     $commentID = $_POST['commentID'];
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 
-	require_once('../../credentials.php');
+	require_once('../../../credentials.php');
 	$conn = connectFSDatabase();
 
     $sql = "UPDATE comments SET answer= '$answer', logo= '$logo' WHERE id= '" . $commentID . "'";

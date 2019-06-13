@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             if ($row['isVerified'] == 1) {
-                echo "Station verified already";
+                echo "Bu istasyon sisteme daha önce kaydedilmiş.";
                 exit;
             }
         }
