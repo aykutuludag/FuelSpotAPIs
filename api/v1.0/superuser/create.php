@@ -34,6 +34,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
 
+    $name = mysqli_real_escape_string($conn, $name);
+
     $query0 = "SELECT * FROM superusers WHERE email = '" . $email . "'";
     $result0 = $conn->query($query0);
 

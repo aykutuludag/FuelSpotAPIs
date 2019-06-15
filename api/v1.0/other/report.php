@@ -28,6 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
 
+    $details = mysqli_real_escape_string($conn, $details);
+
     if (strlen($photo) > 0) {
         $timeStamp = time() . '.jpg';
         $actualpath = 'https://fuelspot.com.tr/uploads/reports/' . $username . '-' . $timeStamp;

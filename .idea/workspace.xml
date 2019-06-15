@@ -12,9 +12,9 @@
     <session id="-46305016">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="30" />
+          <entry key="project.closed" value="31" />
           <entry key="project.open.time.0" value="8" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
@@ -23,19 +23,19 @@
           <entry key="project.open.time.6" value="8" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="30" />
+          <entry key="project.opened" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="error_log" value="2" />
           <entry key="php" value="476" />
-          <entry key="png" value="1" />
+          <entry key="png" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Image" value="1" />
+          <entry key="Image" value="2" />
           <entry key="PHP" value="476" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
@@ -56,7 +56,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/v1.0/finance/fetch-prices.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -184,7 +184,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,7 +214,42 @@
               <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="automobile" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="campaign" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="comment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
               <item name="finance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="other" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="purchase" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
@@ -229,7 +263,24 @@
               <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="v1.0" type="462c0819:PsiDirectoryNode" />
+              <item name="superuser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="v1.0" type="462c0819:PsiDirectoryNode" />
               <item name="user" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="default_icons" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="station_icons" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
@@ -239,6 +290,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -312,6 +364,7 @@
       <workItem from="1559071758418" duration="947000" />
       <workItem from="1559082812914" duration="470000" />
       <workItem from="1559095096193" duration="1825000" />
+      <workItem from="1560456713714" duration="747000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1552914249562</created>
@@ -439,17 +492,23 @@
       <option name="project" value="LOCAL" />
       <updated>1559098256850</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="bug fixing">
+      <created>1560456855850</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1560456855850</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32634000" />
+    <option name="totallyTimeSpent" value="33381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3411514" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.34488273" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -789,9 +848,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/v1.0/automobile/error_log" />
-    <entry file="file://$PROJECT_DIR$/default_icons/news.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/v1.0/admin/login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -861,6 +917,9 @@
           <caret line="3" column="41" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/default_icons/news.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/api/v1.0/finance/fetch-prices.php">
       <provider selected="true" editor-type-id="text-editor">

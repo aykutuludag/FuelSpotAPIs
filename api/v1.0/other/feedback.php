@@ -19,6 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
+
+    $message = mysqli_real_escape_string($conn, $message);
     
     if ($screenshot != null) {
         $timeStamp  = time() . '.jpg';

@@ -54,6 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
 
+    $plate_no = mysqli_real_escape_string($conn, $plate_no);
+
     // Check plateNo exist
     $sql_plate = "SELECT * FROM automobiles WHERE plateNo = '" . $plate_no . "'";
     $result_plate = $conn->query($sql_plate);

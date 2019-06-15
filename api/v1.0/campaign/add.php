@@ -38,6 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
+
+    $campaignName = mysqli_real_escape_string($conn, $campaignName);
+    $campaignDesc = mysqli_real_escape_string($conn, $campaignDesc);
 	
     if ($campaignPhoto != null) {
         $actualpath = 'https://fuelspot.com.tr/uploads/campaigns/' . $stationID . '-' . $campaignName . '.jpg';

@@ -31,8 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
-
-    $sql = "INSERT INTO comments(comment,station_id,username,user_photo,stars) VALUES('$comment', '$station_id', '$username', '$userphoto', '$userStars')";
+	
+	$comment = mysqli_real_escape_string($conn, $comment);
+	
+    $sql = "INSERT INTO comments(username,user_photo,station_id,comment,stars) VALUES('$username','$userphoto','$station_id','$comment','$userStars')";
 
     if (mysqli_query($conn, $sql)) {
         echo "Success";
