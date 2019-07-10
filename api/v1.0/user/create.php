@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $name = mysqli_real_escape_string($conn, $name);
     $username = mysqli_real_escape_string($conn, $username);
 
-    $queryCheckEmail = "SELECT * FROM superusers WHERE email = '" . $email . "'";
+    $queryCheckEmail = "SELECT * FROM users WHERE email = '" . $email . "'";
     $result0 = $conn->query($queryCheckEmail);
 
     // email does exist. Logged in.
@@ -50,14 +50,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $outPutArray[] = array_merge($tempArray[0], array("token" => $jwt));
         echo json_encode($outPutArray);
     } else {
-        $queryUserName = "SELECT * FROM superusers WHERE username = '" . $username . "'";
+        $queryUserName = "SELECT * FROM users WHERE username = '" . $username . "'";
         $result1 = $conn->query($queryUserName);
 
         // username exist. Create random number and add to username
         if (mysqli_num_rows($result1) > 0) {
-            $randomInt = mt_rand(1,999);
+            $randomInt = mt_rand(1, 999);
             $username = $username . $randomInt;
-            $queryCreateUser = "INSERT INTO superusers(username,name,email,photo) VALUES ('$username','$name','$email','$photo')";
+            $queryCreateUser = "INSERT INTO users(username,name,email,photo) VALUES ('$username','$name','$email','$photo')";
+
+            // User created
+            if (mysqli_query($conn, $queryCreateUser)) {
+                $fResult = $conn->query($queryCheckEmail);
+                if (mysqli_num_rows($fResult) > 0) {
+                    while ($row = mysqli_fetch_assoc($fResult)) {
+                        $tempArray[] = $row;
+                    }
+                    include('../../token-creator.php');
+                    $outPutArray[] = array_merge($tempArray[0], array("token" => $jwt));
+                    echo json_encode($outPutArray);
+                }
+            }
+        } else {
+            // Username doesn't exist. Create
+            $queryCreateUser = "INSERT INTO users(username,name,email,photo) VALUES ('$username','$name','$email','$photo')";
 
             // User created
             if (mysqli_query($conn, $queryCreateUser)) {

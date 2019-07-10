@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed30c55-db2b-444a-9890-4a105e7f771c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/v1.0/admin/add-global-campaign.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/v1.0/campaign/fetch-global.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/token-creator.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/token-creator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/token-validator.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/token-validator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/bulk-station-fetch.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/bulk-station-fetch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/station-add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/station-add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/station-update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/station-update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/campaign/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/campaign/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/campaign/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/campaign/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/finance/fetch-prices.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/finance/fetch-prices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/finance/fetch-station-prices.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/finance/fetch-station-prices.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/other/news.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/other/news.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/station/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/station/update.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/v1.0/superuser/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/superuser/create.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/v1.0/user/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/user/create.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,45 +16,45 @@
     <session id="-46305016">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="32" />
-          <entry key="project.open.time.0" value="9" />
+          <entry key="project.closed" value="34" />
+          <entry key="project.open.time.0" value="10" />
           <entry key="project.open.time.1" value="5" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="8" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="35" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="error_log" value="2" />
-          <entry key="php" value="489" />
+          <entry key="php" value="492" />
           <entry key="png" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="2" />
-          <entry key="PHP" value="489" />
+          <entry key="PHP" value="492" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="error_log" value="1" />
-          <entry key="php" value="1534" />
-          <entry key="txt" value="424" />
+          <entry key="php" value="1635" />
+          <entry key="txt" value="434" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="1534" />
-          <entry key="PLAIN_TEXT" value="425" />
+          <entry key="PHP" value="1635" />
+          <entry key="PLAIN_TEXT" value="435" />
         </counts>
       </usages-collector>
     </session>
@@ -75,15 +62,19 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/v1.0/admin/add-global-campaign.php">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/api/v1.0/user/create.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="74" selection-end-column="45" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/v1.0/user/create.php">
+        <entry file="file://$PROJECT_DIR$/api/v1.0/superuser/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-44">
-              <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+            <state relative-caret-position="687">
+              <caret line="85" column="88" selection-end-line="92" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -103,6 +94,7 @@
       <find>$AUTH_KEY  = 'Ph76g0MSZ2okeWQmShYDlXakjgjhbe';</find>
       <find>SELECT * FROM</find>
       <find>return;</find>
+      <find>superusers</find>
     </findStrings>
     <replaceStrings>
       <replace>https://fuelspot.com.tr</replace>
@@ -173,8 +165,8 @@
         <option value="$PROJECT_DIR$/api/v1.0/other/feedback.php" />
         <option value="$PROJECT_DIR$/api/v1.0/other/order.php" />
         <option value="$PROJECT_DIR$/api/v1.0/other/report.php" />
-        <option value="$PROJECT_DIR$/api/v1.0/superuser/create.php" />
         <option value="$PROJECT_DIR$/api/v1.0/user/create.php" />
+        <option value="$PROJECT_DIR$/api/v1.0/superuser/create.php" />
       </list>
     </option>
   </component>
@@ -307,6 +299,65 @@
             </path>
             <path>
               <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="admins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="automobiles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="bills" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="campaigns" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="feedback" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="news" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="reports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="superusers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FuelSpotAPIs" type="462c0819:PsiDirectoryNode" />
+              <item name="uploads" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FuelSpotAPIs" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
             </path>
           </expand>
@@ -388,7 +439,9 @@
       <workItem from="1559095096193" duration="1825000" />
       <workItem from="1560456713714" duration="747000" />
       <workItem from="1560624848693" duration="235000" />
-      <workItem from="1562788245688" duration="827000" />
+      <workItem from="1562788245688" duration="1071000" />
+      <workItem from="1562789770551" duration="11000" />
+      <workItem from="1562791732858" duration="239000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1552914249562</created>
@@ -530,17 +583,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560625076847</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="bugs fixed">
+      <created>1562789304217</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1562789304217</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34443000" />
+    <option name="totallyTimeSpent" value="34937000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3523454" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.35980812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -930,16 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1.0/superuser/create.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="36" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/v1.0/admin/add-global-campaign.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -947,10 +997,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1.0/admin/add-global-campaign.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/v1.0/user/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        <state relative-caret-position="449">
+          <caret line="73" column="10" selection-start-line="73" selection-start-column="10" selection-end-line="74" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/v1.0/superuser/create.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="687">
+          <caret line="85" column="88" selection-end-line="92" selection-end-column="1" />
         </state>
       </provider>
     </entry>
