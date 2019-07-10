@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $dieselPrice   = $_POST['dieselPrice'];
     $LPGPrice      = $_POST['lpgPrice'];
     $elecPrice     = $_POST['electricityPrice'];
+	$otherFuels      = $_POST['otherFuels'];
     
     if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
@@ -69,6 +70,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $elecPrice = 0;
     }
+	
+    if (strlen($otherFuels) > 0) {
+        $var6 = " otherFuels='$otherFuels',";
+        $sql   = $sql . $var6;
+        
+        $arr  = json_decode($otherFuels, true);
+        $gas2 = $arr[0]["gasoline2"];
+        $die2 = $arr[0]["diesel2"];
+    }
     
     if ($sql == "UPDATE stations SET") {
         echo "At least 1 optional parameter required.";
@@ -83,18 +93,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         if ($conn->query($sql) === TRUE) {
             echo "Success";
-            if ($gasolinePrice != 0 || $dieselPrice != 0 || $LPGPrice != 0 || $elecPrice != 0) {
+            if ($gasolinePrice != 0 || $dieselPrice != 0 || $LPGPrice != 0 || $elecPrice != 0 || $gas2 != 0 || $die2 != 0) {
                 $query0  = "SELECT * FROM finance WHERE stationID = '" . $stationID . "' ORDER BY date DESC LIMIT 1";
                 $result0 = $conn->query($query0);
                 if (mysqli_num_rows($result0) > 0) {
                     $row = mysqli_fetch_assoc($result0);
-                    if ($row["gasolinePrice"] != $gasolinePrice || $row["dieselPrice"] != $dieselPrice || $row["lpgPrice"] != $LPGPrice || $row["electricityPrice"] != $elecPrice) {
-                        $sql2 = "INSERT INTO finance(stationID,stationName,country,gasolinePrice,dieselPrice,lpgPrice,electricityPrice,provider) VALUES('$stationID', '$stationName', '$country', '$gasolinePrice', '$dieselPrice', '$LPGPrice', '$elecPrice', 'owner')";
+                    if ($row["gasolinePrice"] != $gasolinePrice || $row["dieselPrice"] != $dieselPrice || $row["lpgPrice"] != $LPGPrice || $row["electricityPrice"] != $elecPrice || $row["gasoline2"] != $gas2 || $row["diesel2"] != $die2) {
+						$sql2 = "INSERT INTO finance(stationID,stationName,country,gasolinePrice,dieselPrice,lpgPrice,electricityPrice,gasolinePrice2,dieselPrice2,provider) VALUES('$stationID', '$stationName', '$country', '$gasolinePrice', '$dieselPrice', '$LPGPrice', '$elecPrice', '$gas2', '$die2', 'admin')";
                         mysqli_query($conn, $sql2);
                     }
                 } else {
                     // No record found. Add it.
-                    $sql2 = "INSERT INTO finance(stationID,stationName,country,gasolinePrice,dieselPrice,lpgPrice,electricityPrice,provider) VALUES('$stationID', '$stationName', '$country', '$gasolinePrice', '$dieselPrice', '$LPGPrice', '$elecPrice', 'owner')";
+                    $sql2 = "INSERT INTO finance(stationID,stationName,country,gasolinePrice,dieselPrice,lpgPrice,electricityPrice,gasolinePrice2,dieselPrice2,provider) VALUES('$stationID', '$stationName', '$country', '$gasolinePrice', '$dieselPrice', '$LPGPrice', '$elecPrice', '$gas2', '$die2', 'admin')";
                     mysqli_query($conn, $sql2);
                 }
             }

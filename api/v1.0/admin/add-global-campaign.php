@@ -3,15 +3,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include('../../token-validator.php');
 
     // Parameters
-	$stationID     = $_POST['stationID'];
+	$companyName     = $_POST['companyName'];
     $campaignName  = $_POST['campaignName'];
     $campaignDesc  = $_POST['campaignDesc'];
     $campaignStart = $_POST['campaignStart'];
     $campaignEnd   = $_POST['campaignEnd'];
 	$campaignPhoto = $_POST['campaignPhoto'];
 	
-	if (strlen($stationID) == 0 || $stationID == 0) {
-        echo "stationID required";
+	if (strlen($companyName) == 0) {
+        echo "companyName required";
         exit;
     }
 	
@@ -42,11 +42,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $campaignDesc = mysqli_real_escape_string($conn, $campaignDesc);
 	
     if ($campaignPhoto != null) {
-        $actualpath = 'https://fuelspot.com.tr/uploads/campaigns/' . $stationID . '-' . $campaignName . '.jpg';
-        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/campaigns/' . $stationID . '-' . $campaignName . '.jpg', base64_decode($campaignPhoto));
-		$sql  = "INSERT INTO campaigns(stationID,campaignName,campaignDesc,campaignPhoto,campaignStart,campaignEnd) VALUES('$stationID', '$campaignName', '$campaignDesc', '$actualpath', '$campaignStart', '$campaignEnd')";
+        $actualpath = 'https://fuelspot.com.tr/uploads/campaigns/global/' . $companyName . '-' . $campaignName . '.jpg';
+        file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/campaigns/global/' . $companyName . '-' . $campaignName . '.jpg', base64_decode($campaignPhoto));
+		$sql  = "INSERT INTO campaigns_global(companyName,campaignName,campaignDesc,campaignPhoto,campaignStart,campaignEnd) VALUES('$companyName', '$campaignName', '$campaignDesc', '$actualpath', '$campaignStart', '$campaignEnd')";
     } else {
-		$sql  = "INSERT INTO campaigns(stationID,campaignName,campaignDesc,campaignStart,campaignEnd) VALUES('$stationID', '$campaignName', '$campaignDesc', '$campaignStart', '$campaignEnd')";
+		$sql  = "INSERT INTO campaigns_global(companyName,campaignName,campaignDesc,campaignStart,campaignEnd) VALUES('$companyName', '$campaignName', '$campaignDesc', '$campaignStart', '$campaignEnd')";
     }
     
     if (mysqli_query($conn, $sql)) {

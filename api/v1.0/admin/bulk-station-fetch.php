@@ -1,10 +1,10 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
     include('../../token-validator.php');
 
     // Parameters
-    $country = $_GET['country'];
+    $country = $_POST['country'];
     $outPutArray = [];
 
     if (strlen($country) == 0) {
@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
-    $sql = "SELECT * FROM stations WHERE country = '" . $country . "' ORDER BY id";
+    $sql = "SELECT * FROM stations WHERE country = '" . $country . "' ORDER BY location DESC";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {

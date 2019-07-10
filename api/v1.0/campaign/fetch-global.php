@@ -4,18 +4,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     include('../../token-validator.php');
 
     // Parameters
-    $country = $_GET['country'];
+    $date = date('Y-m-d H:i:s');
     $outPutArray = [];
-
-    if (strlen($country) == 0) {
-        echo "country required";
-        exit;
-    }
 
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
-
-    $sql = "SELECT * FROM news WHERE country = '" . $country . "' ORDER BY releaseDate DESC LIMIT 10";
+    $sql = "SELECT * FROM campaigns_global WHERE campaignEnd >= '" . $date . "' ORDER BY campaignEnd ASC";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {

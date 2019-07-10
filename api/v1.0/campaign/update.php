@@ -18,6 +18,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
+	
+	$campaignName = mysqli_real_escape_string($conn, $campaignName);
+	$campaignDesc = mysqli_real_escape_string($conn, $campaignDesc);
+	
     $sql  = "UPDATE campaigns SET";
     
 	if (strlen($campaignName) > 0) {

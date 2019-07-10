@@ -24,6 +24,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
+	
+	$comment = mysqli_real_escape_string($conn, $comment);
 
     $sql = "UPDATE comments SET comment= '$comment', stars = '$userStars' WHERE id= '" . $commentID . "'";
 

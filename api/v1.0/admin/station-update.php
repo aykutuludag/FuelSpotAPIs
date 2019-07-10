@@ -3,21 +3,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     include('../../token-validator.php');
     
     // Parameters
-    $stationID        = $_POST['stationID'];
-    $stationName      = $_POST['stationName'];
-    $stationVicinity  = $_POST['stationVicinity'];
-    $country          = $_POST['country'];
-    $location         = $_POST['location'];
-    $facilities       = $_POST['facilities'];
-    $stationLogo      = $_POST['stationLogo'];
-    $gasolinePrice    = $_POST['gasolinePrice'];
-    $dieselPrice      = $_POST['dieselPrice'];
-    $LPGPrice         = $_POST['lpgPrice'];
-    $elecPrice        = $_POST['electricityPrice'];
-    $licenseNo        = $_POST['licenseNo'];
-    $owner            = $_POST['owner'];
-    $isVerified       = $_POST['isVerified'];
-    $isActive         = $_POST['isActive'];
+    $stationID       = $_POST['stationID'];
+    $stationName     = $_POST['stationName'];
+    $stationVicinity = $_POST['stationVicinity'];
+    $country         = $_POST['country'];
+    $location        = $_POST['location'];
+    $facilities      = $_POST['facilities'];
+    $stationLogo     = $_POST['stationLogo'];
+    $gasolinePrice   = $_POST['gasolinePrice'];
+    $dieselPrice     = $_POST['dieselPrice'];
+    $LPGPrice        = $_POST['lpgPrice'];
+    $elecPrice       = $_POST['electricityPrice'];
+    $otherFuels      = $_POST['otherFuels'];
+    $licenseNo       = $_POST['licenseNo'];
+    $owner           = $_POST['owner'];
+    $isVerified      = $_POST['isVerified'];
+    $isActive        = $_POST['isActive'];
     
     if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
@@ -33,9 +34,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "country required";
         exit;
     }
-	
-	require_once('../../credentials.php');
-	$conn = connectFSDatabase();
+    
+    require_once('../../credentials.php');
+    $conn = connectFSDatabase();
     $sql  = "UPDATE stations SET";
     
     if (strlen($stationName) > 0) {
@@ -96,24 +97,33 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $elecPrice = 0;
     }
     
-    if (strlen($licenseNo) > 0) {
-        $var10 = " licenseNo='$licenseNo',";
+    if (strlen($otherFuels) > 0) {
+        $var10 = " otherFuels='$otherFuels',";
         $sql   = $sql . $var10;
+        
+        $arr  = json_decode($otherFuels, true);
+        $gas2 = $arr[0]["gasoline2"];
+        $die2 = $arr[0]["diesel2"];
     }
     
-    if (strlen($owner) > 0) {
-        $var11 = " owner='$owner',";
+    if (strlen($licenseNo) > 0) {
+        $var11 = " licenseNo='$licenseNo',";
         $sql   = $sql . $var11;
     }
     
-    if (strlen((string) $isVerified) > 0) {
-        $var12 = " isVerified='$isVerified',";
+    if (strlen($owner) > 0) {
+        $var12 = " owner='$owner',";
         $sql   = $sql . $var12;
     }
     
-    if (strlen((string) $isActive) > 0) {
-        $var13 = " isActive='$isActive'";
+    if (strlen((string) $isVerified) > 0) {
+        $var13 = " isVerified='$isVerified',";
         $sql   = $sql . $var13;
+    }
+    
+    if (strlen((string) $isActive) > 0) {
+        $var14 = " isActive='$isActive'";
+        $sql   = $sql . $var14;
     }
     
     if ($sql == "UPDATE stations SET") {
@@ -129,19 +139,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
         if ($conn->query($sql) === TRUE) {
             echo "Success";
-            if ($gasolinePrice != 0 || $dieselPrice != 0 || $LPGPrice != 0 || $elecPrice != 0) {
+            if ($gasolinePrice != 0 || $dieselPrice != 0 || $LPGPrice != 0 || $elecPrice != 0 || $gas2 != 0 || $die2 != 0) {
                 $query0  = "SELECT * FROM finance WHERE stationID = '" . $stationID . "' ORDER BY date DESC LIMIT 1";
                 $result0 = $conn->query($query0);
                 if (mysqli_num_rows($result0) > 0) {
                     $row = mysqli_fetch_assoc($result0);
-                    if ($row["gasolinePrice"] != $gasolinePrice || $row["dieselPrice"] != $dieselPrice || $row["lpgPrice"] != $LPGPrice || $row["electricityPrice"] != $elecPrice) {
-                         $sql2 = "INSERT INTO finance(stationID,stationName,country,gasolinePrice,dieselPrice,lpgPrice,electricityPrice,provider) VALUES('$stationID', '$stationName', '$country', '$gasolinePrice', '$dieselPrice', '$LPGPrice', '$elecPrice', 'admin')";
-						 mysqli_query($conn, $sql2);
+                    if ($row["gasolinePrice"] != $gasolinePrice || $row["dieselPrice"] != $dieselPrice || $row["lpgPrice"] != $LPGPrice || $row["electricityPrice"] != $elecPrice || $row["gasoline2"] != $gas2 || $row["diesel2"] != $die2) {
+                        $sql2 = "INSERT INTO finance(stationID,stationName,country,gasolinePrice,dieselPrice,lpgPrice,electricityPrice,gasolinePrice2,dieselPrice2,provider) VALUES('$stationID', '$stationName', '$country', '$gasolinePrice', '$dieselPrice', '$LPGPrice', '$elecPrice', '$gas2', '$die2', 'admin')";
+                        mysqli_query($conn, $sql2);
                     }
                 } else {
                     // No record found. Add it.
-                     $sql2 = "INSERT INTO finance(stationID,stationName,country,gasolinePrice,dieselPrice,lpgPrice,electricityPrice,provider) VALUES('$stationID', '$stationName', '$country', '$gasolinePrice', '$dieselPrice', '$LPGPrice', '$elecPrice', 'admin')";
-					 mysqli_query($conn, $sql2);
+                    $sql2 = "INSERT INTO finance(stationID,stationName,country,gasolinePrice,dieselPrice,lpgPrice,electricityPrice,gasolinePrice2,dieselPrice2,provider) VALUES('$stationID', '$stationName', '$country', '$gasolinePrice', '$dieselPrice', '$LPGPrice', '$elecPrice', '$gas2', '$die2', 'admin')";
+                    mysqli_query($conn, $sql2);
                 }
             }
         } else {

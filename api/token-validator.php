@@ -1,7 +1,10 @@
 <?php
 require_once('php-jwt/JWT.php');
+require_once('php-jwt/BeforeValidException.php');
+require_once('php-jwt/ExpiredException.php');
+require_once('php-jwt/SignatureInvalidException.php');
 
-$secret_key = "Ph76g0MSZ2okeWQmShYDlXakjgjhbe";
+$secret_key  = "Ph76g0MSZ2okeWQmShYDlXakjgjhbe";
 $bearerToken = "";
 
 $requestHeaders = apache_request_headers();
@@ -17,9 +20,14 @@ if (isset($requestHeaders['Authorization'])) {
     }
 }
 
+if (strlen($bearerToken) == 0) {
+    echo "AuthError";
+    exit;
+}
+
 try {
     $decoded = JWT::decode($bearerToken, $secret_key, array('HS256'));
-} catch (Exception $e) {
+} catch (\Exception $e) {
     echo "AuthError";
     exit();
 }
