@@ -25,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 
-	require_once('../../credentials.php');
-	$conn = connectFSDatabase();
+    require_once('../../credentials.php');
+    $conn = connectFSDatabase();
 
     $details = mysqli_real_escape_string($conn, $details);
 
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $actualpath = '';
     }
 
-    $sql = "INSERT INTO reports(username,stationID,report,details,photo,prices) VALUES('$username', '$station_id', '$report', '$details', '$actualpath', '$prices')";
+    $sql = "INSERT INTO reports(username,stationID,report,details,photo) VALUES('$username', '$station_id', '$report', '$details', '$actualpath')";
 
     if (mysqli_query($conn, $sql)) {
         echo "Success";
