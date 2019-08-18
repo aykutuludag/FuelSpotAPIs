@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
 
-    $sql = "SELECT * FROM comments WHERE username = '" . $username . "' ORDER BY time DESC";
+    $sql = "SELECT * FROM comments WHERE username='" . $username . "' ORDER BY time DESC";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {

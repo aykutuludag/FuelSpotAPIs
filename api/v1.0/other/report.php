@@ -25,8 +25,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 
-    require_once('../../credentials.php');
-    $conn = connectFSDatabase();
+	require_once('../../credentials.php');
+	$conn = connectFSDatabase();
 
     $details = mysqli_real_escape_string($conn, $details);
 

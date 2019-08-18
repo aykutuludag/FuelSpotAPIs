@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
-    $sql = "SELECT * FROM stations WHERE country = '" . $country . "' ORDER BY location DESC";
+    $sql = "SELECT * FROM stations WHERE country = '" . $country . "' ORDER BY id ASC";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {

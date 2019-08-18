@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
-    $sql = "SELECT * FROM automobile_models";
+    $sql = "SELECT * FROM automobile_models ORDER BY id ASC";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {
