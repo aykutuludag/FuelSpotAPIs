@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $dieselPrice   = $_POST['dieselPrice'];
     $LPGPrice      = $_POST['lpgPrice'];
     $elecPrice     = $_POST['electricityPrice'];
-	$otherFuels      = $_POST['otherFuels'];
+	$otherFuels    = $_POST['otherFuels'];
     
     if (strlen($stationID) == 0 || $stationID == 0) {
         echo "stationID required";
@@ -47,28 +47,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $var2 = " gasolinePrice='$gasolinePrice',";
         $sql  = $sql . $var2;
     } else {
-        $gasolinePrice = 0;
+        $gasolinePrice = 0.00;
     }
     
     if (strlen((string) $dieselPrice) > 0) {
         $var3 = " dieselPrice='$dieselPrice',";
         $sql  = $sql . $var3;
     } else {
-        $dieselPrice = 0;
+        $dieselPrice = 0.00;
     }
     
     if (strlen((string) $LPGPrice) > 0) {
         $var4 = " lpgPrice='$LPGPrice',";
         $sql  = $sql . $var4;
     } else {
-        $LPGPrice = 0;
+        $LPGPrice = 0.00;
     }
     
     if (strlen((string) $elecPrice) > 0) {
         $var5 = " electricityPrice='$elecPrice',";
         $sql  = $sql . $var5;
     } else {
-        $elecPrice = 0;
+        $elecPrice = 0.00;
     }
 	
     if (strlen($otherFuels) > 0) {
@@ -80,13 +80,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (array_key_exists("gasoline2", $arr[0])) {
             $gas2 = $arr[0]["gasoline2"];
         } else {
-            $gas2 = 0;
+            $gas2 = 0.00;
         }
 		
 		if (array_key_exists("diesel2", $arr[0])) {
             $die2 = $arr[0]["diesel2"];
         } else {
-            $die2 = 0;
+            $die2 = 0.00;
         }
     }
     

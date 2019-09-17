@@ -73,28 +73,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $var6 = " gasolinePrice='$gasolinePrice',";
         $sql  = $sql . $var6;
     } else {
-        $gasolinePrice = 0;
+        $gasolinePrice = 0.00;
     }
     
     if (strlen((string) $dieselPrice) > 0) {
         $var7 = " dieselPrice='$dieselPrice',";
         $sql  = $sql . $var7;
     } else {
-        $dieselPrice = 0;
+        $dieselPrice = 0.00;
     }
     
     if (strlen((string) $LPGPrice) > 0) {
         $var8 = " lpgPrice='$LPGPrice',";
         $sql  = $sql . $var8;
     } else {
-        $LPGPrice = 0;
+        $LPGPrice = 0.00;
     }
     
     if (strlen((string) $elecPrice) > 0) {
         $var9 = " electricityPrice='$elecPrice',";
         $sql  = $sql . $var9;
     } else {
-        $elecPrice = 0;
+        $elecPrice = 0.00;
     }
     
     if (strlen($otherFuels) > 0) {
@@ -106,13 +106,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if (array_key_exists("gasoline2", $arr[0])) {
             $gas2 = $arr[0]["gasoline2"];
         } else {
-            $gas2 = 0;
+            $gas2 = 0.00;
         }
 		
 		if (array_key_exists("diesel2", $arr[0])) {
             $die2 = $arr[0]["diesel2"];
         } else {
-            $die2 = 0;
+            $die2 = 0.00;
         }
     }
     

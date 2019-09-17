@@ -13,6 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $location = $_POST['location'];
     $country = $_POST['country'];
     $language = $_POST['language'];
+	$token    = $_POST['token'];
 
     if (strlen($username) == 0) {
         echo "username required";
@@ -72,6 +73,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $var9 = " language='$language',";
         $sql = $sql . $var9;
     }
+	
+	if (strlen($token) > 0) {
+		$var10 = " token='$token',";
+        $sql = $sql . $var10;
+	}
 
     if ($sql == "UPDATE users SET") {
         echo "At least 1 optional parameter required.";
