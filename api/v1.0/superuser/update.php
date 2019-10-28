@@ -12,6 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phoneNumber = $_POST['phoneNumber'];
     $country = $_POST['country'];
     $language = $_POST['language'];
+	$token   = $_POST['token'];
 
     if (strlen($username) == 0) {
         echo "username required";
@@ -66,6 +67,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $var8 = " language='$language',";
         $sql = $sql . $var8;
     }
+	
+	if (strlen($token) > 0) {
+		$var10 = " token='$token',";
+        $sql = $sql . $var10;
+	}
 
     if ($sql == "UPDATE superusers SET") {
         echo "At least 1 optional parameter required.";

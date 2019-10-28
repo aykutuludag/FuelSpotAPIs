@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 
-    if (strlen($fuelType) == 0 || $fuelType == -1) {
+    if ((strlen($fuelType) == 0 || $fuelType == -1) && (strlen($fuelType2) == 0 || $fuelType2 == -1)) {
         echo "fuelType required";
         exit;
     }
