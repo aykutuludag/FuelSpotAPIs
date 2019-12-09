@@ -93,8 +93,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require_once('../../credentials.php');
     $conn = connectFSDatabase();
     
-    $address = mysqli_real_escape_string($conn, $address);
-    
     $sql    = "SELECT * FROM banking WHERE username = '" . $username . "' ORDER BY time DESC LIMIT 0, 1";
     $result = $conn->query($sql);
     

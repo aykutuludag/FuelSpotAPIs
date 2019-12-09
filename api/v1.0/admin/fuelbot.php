@@ -278,8 +278,8 @@ function arrangeLPGPrice($lpgFiyat)
     // We accept 3.00 and and random arbitrage
     $LPGPrice = 3.00;
     $min      = 0.17;
-    $max      = 0.49;
-    // Random between 0.17 ₺ - 0.49 ₺ (23.10.2019)
+    $max      = 0.50;
+    // Random between 0.17 ₺ - 0.50 ₺ (23.10.2019)
     
     $decimals = 2;
     $divisor  = pow(10, $decimals);
@@ -310,7 +310,7 @@ function findStation()
         $LPGPrice       = $row["lpgPrice"];
         $elecPrice      = $row["electricityPrice"];
         
-        if ($LPGPrice != 0.00 && $LPGPrice < 3.00) {
+        if ($LPGPrice != 0.00 && $LPGPrice <= 3.15) {
             arrangeLPGPrice($LPGPrice);
         }
         
@@ -403,8 +403,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $elecPrice      = 0.00;
     
     $opts = array(
-        'http' => array(
-            'header' => "User-Agent:MyAgent/1.0\r\n"
+        'https' => array(
+            'header' => "User-Agent: Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.102011-10-16 20:23:10\r\n"
         )
     );
     
@@ -421,10 +421,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
     
-    if (strlen($ilce) == 0) {
+    /*if (strlen($ilce) == 0) {
         echo "ILCE required";
         exit;
-    }
+    }*/
     
     if (strlen($captcha) == 0) {
         echo "CAPTCHA required";
@@ -432,7 +432,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     
     $context     = stream_context_create($opts);
-    $requestURL  = 'http://epdk.gov.tr/Detay/PompaFiyatlari?ddlIl=' . $il . '&ddlIlce=' . $ilce . '&txtCaptcha=' . $captcha;
+    $requestURL  = "https://www.epdk.org.tr/Detay/PompaFiyatlari?ddlIl=" . $il . "&ddlIlce=" . $ilce . "&txtCaptcha=" . $captcha;
     $content     = file_get_contents($requestURL, false, $context);
     $first_step  = explode('<tbody>', $content);
     $second_step = explode("</tbody>", $first_step[1]);
