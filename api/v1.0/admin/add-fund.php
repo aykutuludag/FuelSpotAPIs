@@ -6,7 +6,7 @@ function sendNotification($firebase_token)
     $firebase_api = 'AAAAEzFQC08:APA91bHmQe1rwNULfKJSsojkmEoNCUbxyhQpOTQ4UUaSaWlPfgLbHhUHrrVqjXZEAZ8bgAo3RS52pd9OM6DsFDig_nI5I_xRg6ufhI67kjqAzg1Uw7KVt0oxiqNAR0Sgy9Kii2iGflsKnEy63-2pEig_BxfmxF5DFw';
     $titleBody    = array(
         'title' => 'FuelSpot',
-        'body' => 'Bonus hesabınıza yansıtıldı!'
+        'body' => 'Bonus hesabınıza yansıtıldı! Bonus bilgilerinizi profil ve mağaza sayfalarında görebilirsiniz.'
     );
     $fields       = array(
         'to' => $firebase_token,

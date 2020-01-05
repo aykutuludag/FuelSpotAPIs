@@ -87,7 +87,7 @@ function controlName($sName)
     $S_Oil        = "SİYAM PETROLCÜLÜK SANAYİ VE TİC. A.Ş .(S OIL)";
     $Teco         = "TECO PETROLCÜLÜK SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Termo        = "TERMOPET AKARYAKIT NAKLİYAT VE TİCARET LİMİTED ŞİRKETİ";
-    $Total        = "TOTAL OIL TÜRKİYE ANONİM ŞİRKETİ";
+    $Total        = "GÜZEL ENERJİ AKARYAKIT ANONİM ŞİRKETİ";
     $TP           = "TP PETROL DAĞITIM ANONİM ŞİRKETİ";
     
     if ($sName === "Alpet") {
@@ -271,15 +271,15 @@ function controlName($sName)
     }
 }
 
-function arrangeLPGPrice($lpgFiyat)
+function controlLPGPrice($lpgFiyat)
 {
     global $LPGPrice;
     
-    // We accept 3.00 and and random arbitrage
+    // We accept 3.00 and give random arbitrage
     $LPGPrice = 3.00;
-    $min      = 0.17;
-    $max      = 0.50;
-    // Random between 0.17 ₺ - 0.50 ₺ (23.10.2019)
+    $min      = 0.25;
+    $max      = 0.69;
+    // Random between 0.21 ₺ - 0.69 ₺ (22.12.2019)
     
     $decimals = 2;
     $divisor  = pow(10, $decimals);
@@ -310,8 +310,8 @@ function findStation()
         $LPGPrice       = $row["lpgPrice"];
         $elecPrice      = $row["electricityPrice"];
         
-        if ($LPGPrice != 0.00 && $LPGPrice <= 3.15) {
-            arrangeLPGPrice($LPGPrice);
+        if ($LPGPrice != 0.00 && $LPGPrice <= 3.21) {
+            controlLPGPrice($LPGPrice);
         }
         
         controlName($stationName);
@@ -340,19 +340,19 @@ function controlPrices()
         $dieselPrice  = $pahaliMazot;
     }
     
-    if ($gasolinePrice < 6.25 || $gasolinePrice >= 7.30) {
+    if ($gasolinePrice < 6.66 || $gasolinePrice >= 7.35) {
         $gasolinePrice = 0.00;
     }
     
-    if ($gasolinePrice2 < 6.25 || $gasolinePrice2 >= 7.25) {
+    if ($gasolinePrice2 < 6.66 || $gasolinePrice2 >= 7.35) {
         $gasolinePrice2 = 0.00;
     }
     
-    if ($dieselPrice < 5.50 || $dieselPrice >= 6.80) {
+    if ($dieselPrice < 5.70 || $dieselPrice >= 6.90) {
         $dieselPrice = 0.00;
     }
     
-    if ($dieselPrice2 < 5.50 || $dieselPrice2 >= 6.75) {
+    if ($dieselPrice2 < 5.70 || $dieselPrice2 >= 6.90) {
         $dieselPrice2 = 0.00;
     }
     
