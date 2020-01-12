@@ -68,6 +68,7 @@ function controlName($sName)
     $Das          = "MFD AKARYAKIT NAKLİYAT TURİZM İNŞAAT TAŞIMACILIK SANAYİ VE TİCARET LİMİTED ŞİRKETİ";
     $Energy       = "ENERJİ PETROL ÜRÜNLERİ PAZARLAMA ANONİM ŞİRKETİ";
     $Euroil       = "EUROİL ENERJİ DAĞITIM ANONİM ŞİRKETİ";
+	$Eva          = "OKTAV AKARYAKIT PETROL ÜRÜNLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $GO           = "İPRA ENERJİ ANONİM ŞİRKETİ";
     $Gulf         = "DELTA AKARYAKIT TİCARET ANONİM ŞİRKETİ";
     $Hypco        = "HYPCO PETROLCÜLÜK ANONİM ŞİRKETİ";
@@ -77,6 +78,7 @@ function controlName($sName)
     $Memoil       = "MEMOİL AKARYAKIT DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Moil         = "MİLAN PETROL SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Mola         = "MOLAVER AKARYAKIT DAĞITIM TAŞIMACILIK İNŞAAT İTHALAT İHRACAT SANAYİ VE TİCARET ANONİM ŞİRKETİ";
+	$Netoil       = "MAVİ GÖK-DENİZ AKARYAKIT DAĞITIM İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ";
     $Opet         = "OPET PETROLCÜLÜK ANONİM ŞİRKETİ";
     $Pacific      = "PASİFİK PETROLCÜLÜK ANONİM ŞİRKETİ";
     $Petline      = "PETLİNE PETROL ÜRÜNLERİ TİCARET ANONİM ŞİRKETİ";
@@ -89,6 +91,7 @@ function controlName($sName)
     $Termo        = "TERMOPET AKARYAKIT NAKLİYAT VE TİCARET LİMİTED ŞİRKETİ";
     $Total        = "GÜZEL ENERJİ AKARYAKIT ANONİM ŞİRKETİ";
     $TP           = "TP PETROL DAĞITIM ANONİM ŞİRKETİ";
+	$United       = "BİRLEŞİK PETROL ANONİM ŞİRKETİ";
     
     if ($sName === "Alpet") {
         if ($distName === $Alpet) {
@@ -134,6 +137,12 @@ function controlName($sName)
         }
     } else if ($sName === "Euroil") {
         if ($distName === $Euroil) {
+            updateStation();
+        } else {
+            echo 'MARKA UYUŞMAZLIĞI: ' . $EPDK . "<br>";
+        }
+    } else if ($sName === "Eva") {
+        if ($distName === $Eva) {
             updateStation();
         } else {
             echo 'MARKA UYUŞMAZLIĞI: ' . $EPDK . "<br>";
@@ -188,6 +197,12 @@ function controlName($sName)
         }
     } else if ($sName === "Mola") {
         if ($distName === $Mola) {
+            updateStation();
+        } else {
+            echo 'MARKA UYUŞMAZLIĞI: ' . $EPDK . "<br>";
+        }
+    } else if ($sName === "Netoil") {
+        if ($distName === $Netoil) {
             updateStation();
         } else {
             echo 'MARKA UYUŞMAZLIĞI: ' . $EPDK . "<br>";
@@ -260,6 +275,12 @@ function controlName($sName)
         }
     } else if ($sName === "Türkiye Petrolleri") {
         if ($distName === $TP) {
+            updateStation();
+        } else {
+            echo 'MARKA UYUŞMAZLIĞI: ' . $EPDK . "<br>";
+        }
+    } else if ($sName === "United") {
+        if ($distName === $United) {
             updateStation();
         } else {
             echo 'MARKA UYUŞMAZLIĞI: ' . $EPDK . "<br>";
