@@ -44,11 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $timeStamp = time() . '.jpg';
         $actualpath = 'https://fuelspot.com.tr/uploads/comments/' . $username . '-' . $station_id . '-' . $timeStamp;
         file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/comments/' . $username . '-' . $station_id . '-' . $timeStamp, base64_decode($commentPhoto));
+		$sql = "UPDATE comments SET comment= '$comment', stars = '$userStars', comment_photo = '$actualpath' WHERE id= '" . $commentID . "'";
     } else {
-        $actualpath = '';
+        $sql = "UPDATE comments SET comment= '$comment', stars = '$userStars' WHERE id= '" . $commentID . "'";
     }
-
-    $sql = "UPDATE comments SET comment= '$comment', stars = '$userStars', comment_photo = '$actualpath' WHERE id= '" . $commentID . "'";
 
     if (mysqli_query($conn, $sql)) {
         echo "Success";

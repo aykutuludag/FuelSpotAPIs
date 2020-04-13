@@ -39,11 +39,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $timeStamp = time() . '.jpg';
         $actualpath = 'https://fuelspot.com.tr/uploads/comments/' . $username . '-' . $timeStamp;
         file_put_contents('/home/u8276450/fuelspot.com.tr/uploads/comments/' . $username . '-' . $timeStamp, base64_decode($commentPhoto));
+		$sql = "INSERT INTO comments(username,user_photo,station_id,comment,stars,comment_photo) VALUES('$username','$userphoto','$station_id','$comment','$userStars','$actualpath')";
     } else {
-        $actualpath = '';
+        $sql = "INSERT INTO comments(username,user_photo,station_id,comment,stars) VALUES('$username','$userphoto','$station_id','$comment','$userStars')";
     }
-	
-    $sql = "INSERT INTO comments(username,user_photo,station_id,comment,stars,comment_photo) VALUES('$username','$userphoto','$station_id','$comment','$userStars','$actualpath')";
 
     if (mysqli_query($conn, $sql)) {
         echo "Success";
