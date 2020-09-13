@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
 
-    if (strlen($kilometer) == 0 || $kilometer == 0) {
+    if (strlen($kilometer) == 0) {
         echo "kilometer required";
         exit;
     }

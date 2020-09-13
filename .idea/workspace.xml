@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fed30c55-db2b-444a-9890-4a105e7f771c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/api/v1.0/other/fetch-order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/admin/fuelbot.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/admin/fuelbot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/comment/update.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/comment/update.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/v1.0/station/search.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/v1.0/station/search.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,12 +53,6 @@
     <include_path>
       <path value="" />
     </include_path>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="207" />
-    <option name="y" value="30" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
   </component>
   <component name="ProjectId" id="1WH3HMyqLBQgu33DGnGJ1CewIRc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -159,7 +148,7 @@
       <workItem from="1575916249088" duration="143000" />
       <workItem from="1578187032570" duration="229000" />
       <workItem from="1578792605436" duration="73000" />
-      <workItem from="1586819047344" duration="299000" />
+      <workItem from="1586819047344" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="updated">
       <created>1552914249562</created>
@@ -371,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578792656064</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="fuelbot artık eksik ve distribütör değiştirmiş istasyonları kaydediyor.">
+      <created>1586819371956</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1586819371956</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -397,19 +393,20 @@
     <MESSAGE value="FuelBot geliştirildi." />
     <MESSAGE value="yorumlara görsel ekleme imkanı geldi." />
     <MESSAGE value="fuelbot da geliştirmeler" />
-    <option name="LAST_COMMIT_MESSAGE" value="fuelbot da geliştirmeler" />
+    <MESSAGE value="fuelbot artık eksik ve distribütör değiştirmiş istasyonları kaydediyor." />
+    <option name="LAST_COMMIT_MESSAGE" value="fuelbot artık eksik ve distribütör değiştirmiş istasyonları kaydediyor." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1578792654554">
+    <state x="585" y="115" key="CommitChangelistDialog2" timestamp="1586819370336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1578792654554" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1578792658030">
+    <state x="585" y="115" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586819370336" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586819373212">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1578792658030" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586819373212" />
   </component>
 </project>

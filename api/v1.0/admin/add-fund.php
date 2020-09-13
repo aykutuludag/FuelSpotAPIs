@@ -44,9 +44,42 @@ function sendNotification($firebase_token)
     // Close connection
     curl_close($ch);
     echo $result;
-	echo 'Bonus eklendi' . ' - Bildirim gönderildi.';
+    echo 'Bonus eklendi' . ' - Bildirim gönderildi.';
 }
 
+function verifyReport($reportID, $amount)
+{
+    global $conn;
+    $sql = "UPDATE reports SET";
+    
+    $var1 = " status='1',";
+    $sql  = $sql . $var1;
+    
+    $var2 = " reward='$amount',";
+    $sql  = $sql . $var2;
+    
+    if ($sql == "UPDATE reports SET") {
+        echo "At least 1 optional parameter required.";
+        exit;
+    } else {
+        $dummy = substr($sql, -1);
+        if (strcmp($dummy, ',') == 0) {
+            $sql = substr_replace($sql, '', -1);
+        }
+        
+        $sql = $sql . " WHERE id= '" . $reportID . "'";
+        if ($conn->query($sql) === TRUE) {
+            
+        } else {
+            
+        }
+    }
+}
+
+function verifyPurchase($purchaseID, $amount)
+{
+    
+}
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     header('Content-Type: application/json');
@@ -59,6 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $country     = $_POST['country'];
     $amount      = $_POST['amount'];
     $notes       = $_POST['notes'];
+    global $conn;
     
     if (strlen($username) == 0) {
         echo "username required";
@@ -105,6 +139,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql2 = "INSERT INTO banking(username,processType,currency,country,amount,previous_balance,current_balance,notes) VALUES('$username', '$processType', '$currency', '$country', '$amount', '$previous_balance', '$new_balance', '$notes')";
         
         if (mysqli_query($conn, $sql2)) {
+            if ($processType === "reward") {
+                $reportID = explode(" ", $notes);
+                verifyReport($reportID[1], $amount);
+            } else {
+                $purchaseID = explode(" ", $notes);
+                verifyPurchase($purchaseID[1], $amount);
+            }
+            
             // Send notification over firabase
             $sqlUser    = "SELECT * FROM users WHERE username = '" . $username . "'";
             $resultUser = $conn->query($sqlUser);
@@ -113,11 +155,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 while ($row2 = mysqli_fetch_assoc($resultUser)) {
                     $token = $row2['token'];
                 }
+                
                 if (strlen($token) > 0) {
                     sendNotification($token);
                 } else {
                     echo 'Bonus eklendi' . ' - Bildirim gönderilemedi.';
                 }
+                
             } else {
                 echo "Fail";
             }
@@ -128,6 +172,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sqlNew = "INSERT INTO banking(username,processType,currency,country,amount,previous_balance,current_balance,notes) VALUES('$username', '$processType', '$currency', '$country', '$amount', '0.00', '$amount', '$notes')";
         
         if (mysqli_query($conn, $sqlNew)) {
+            if ($processType === "reward") {
+                $reportID = explode(" ", $notes);
+                verifyReport($reportID[1], $amount);
+            } else {
+                $purchaseID = explode(" ", $notes);
+                verifyPurchase($purchaseID[1], $amount);
+            }
+            
             // Send notification over firabase
             $sqlUser    = "SELECT * FROM users WHERE username = '" . $username . "'";
             $resultUser = $conn->query($sqlUser);

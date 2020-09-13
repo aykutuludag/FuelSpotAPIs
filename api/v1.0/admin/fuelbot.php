@@ -55,57 +55,66 @@ function updateStation()
 }
 
 function recordMismatch($stationID, $sName, $distName, $EPDK)
-{  
-	global $conn;
+{
+    global $conn;
     global $distName;
     global $EPDK;
-	global $stationID;
-	
-	$sql3 = "INSERT INTO brand_mismatches(stationID,currentBrand,newBrand,epdkNO) VALUES('$stationID', '$sName', '$distName', '$EPDK')";
-	mysqli_query($conn, $sql3);	
+    global $stationID;
+    
+    $sql3 = "INSERT INTO brand_mismatches(stationID,currentBrand,newBrand,epdkNO) VALUES('$stationID', '$sName', '$distName', '$EPDK')";
+    mysqli_query($conn, $sql3);
 }
 
 function recordMissingLicense($distName, $EPDK, $il, $ilce)
-{  
-	global $conn;
+{
+    global $conn;
     global $distName;
     global $EPDK;
-	
-	$sql3 = "INSERT INTO missing_licenses(licenseNo,distributorName, il, ilce) VALUES('$EPDK', '$distName', '$il', '$ilce')";
-	mysqli_query($conn, $sql3);	
+    
+    $sql3 = "INSERT INTO missing_licenses(licenseNo,distributorName, il, ilce) VALUES('$EPDK', '$distName', '$il', '$ilce')";
+    mysqli_query($conn, $sql3);
 }
 
-function controlName($sName, $stationID)
+function insertCompany($distName)
+{
+    global $conn;
+    global $distName;
+    
+    $sql4 = "INSERT INTO companies(companyName, companyTitle) VALUES('$distName', '$distName')";
+    mysqli_query($conn, $sql4);
+}
+
+function controlName($sName, $stationID, $distName)
 {
     global $distName;
     global $EPDK;
-	global $stationID;
+    global $stationID;
     
-	$Kita7        = "7KITA PETROLCÜLÜK DAĞITIM VE PAZARLAMA ANONİM ŞİRKETİ";
+    $Kita7        = "7KITA PETROLCÜLÜK DAĞITIM VE PAZARLAMA ANONİM ŞİRKETİ";
     $Alpet        = "ALTINBAŞ PETROL VE TİCARET ANONİM ŞİRKETİ";
     $Aytemiz      = "AYTEMİZ AKARYAKIT DAĞITIM ANONİM ŞİRKETİ";
     $Best         = "KALELİ BEST OİL PETROLCÜLÜK TİCARET ANONİM ŞİRKETİ";
     $BP           = "BP PETROLLERİ ANONİM ŞİRKETİ";
     $Bpet         = "BALPET PETROL ÜRÜNLERİ TAŞIMACILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ";
-	$Cekoil       = "DOĞAL KAYNAKLAR AKARYAKIT DAĞITIM VE GAZ İŞLETMELERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ";
-    $Das          = "MFD AKARYAKIT NAKLİYAT TURİZM İNŞAAT TAŞIMACILIK SANAYİ VE TİCARET LİMİTED ŞİRKETİ";
-	$Ecoxpet      = "ECOPET AKARYAKIT ÜRÜNLERİ DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
+    $Cekoil       = "DOĞAL KAYNAKLAR AKARYAKIT DAĞITIM VE GAZ İŞLETMELERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ";
+    $Das          = "MFD AKARYAKIT NAKLİYAT TURİZM İNŞAAT TAŞIMACILIK SANAYİ VE TİCARET LTD ŞTİ";
+    $Ecoxpet      = "ECOPET AKARYAKIT ÜRÜNLERİ DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Energy       = "ENERJİ PETROL ÜRÜNLERİ PAZARLAMA ANONİM ŞİRKETİ";
-	$Enkoil       = "ENKO PETROLCÜLÜK NAKLİYE İNŞAAT TURİZM GIDA SANAYİ VE TİCARET ANONİM ŞİRKETİ";
-    $Euroil       = "EUROİL ENERJİ DAĞITIM ANONİM ŞİRKETİ";
-    $Eva          = "OKTAV AKARYAKIT PETROL ÜRÜNLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ";
+    $Enkoil       = "ENKO PETROLCÜLÜK NAKLİYE İNŞAAT TURİZM GIDA SANAYİ VE TİCARET ANONİM ŞİRKETİ";
+    $Euroil       = "EUROİL ENERJİ DAĞITIM A.Ş.";
+    $Eva          = "KRC AKARYAKIT DAĞITIM DIŞ TİCARET ANONİM ŞİRKETİ";
     $GO           = "İPRA ENERJİ ANONİM ŞİRKETİ";
     $Goldoil      = "AS GOLDOİL AKARYAKIT DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Gulf         = "DELTA AKARYAKIT TİCARET ANONİM ŞİRKETİ";
-	$Hemoil       = "HEMA AKARYAKIT DAĞITIM ULUSLARARASI NAKLİYE İNŞAAT GIDA İTHALAT İHRACAT SANAYİ VE TİCARET ANONİM ŞİRKETİ";
+    $Hemoil       = "HEMA AKARYAKIT DAĞITIM ULUSLARARASI NAKLİYE İNŞAAT GIDA İTHALAT İHRACAT SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Hypco        = "HYPCO PETROLCÜLÜK ANONİM ŞİRKETİ";
     $Kadoil       = "KADOOĞLU PETROLCÜLÜK TAŞIMACILIK TİCARET SANAYİ İTHALAT VE İHRACAT ANONİM ŞİRKETİ";
     $Kpet         = "KENTOİL AKARYAKIT ÜRÜNLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ";
-	$Lionpet      = "LION PET LPG ÜRÜNLERİ DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
+    $Lionpet      = "LION PET LPG ÜRÜNLERİ DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Lukoil       = "AKPET AKARYAKIT DAĞITIM ANONİM ŞİRKETİ";
-	$Maspet       = "MAS PETROLCÜLÜK ANONİM ŞİRKETİ";
+    $Maspet       = "MAS PETROLCÜLÜK ANONİM ŞİRKETİ";
     $Memoil       = "MEMOİL AKARYAKIT DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
-    $Moil         = "MİLAN PETROL SANAYİ VE TİCARET ANONİM ŞİRKETİ";
+    $Moil         = "GÜZEL ENERJİ AKARYAKIT ANONİM ŞİRKETİ";
     $Mola         = "MOLAVER AKARYAKIT DAĞITIM TAŞIMACILIK İNŞAAT İTHALAT İHRACAT SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Nasoil       = "NASOİL AKARYAKIT DAĞITIM TAŞIMACILIK SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Netoil       = "MAVİ GÖK-DENİZ AKARYAKIT DAĞITIM İTHALAT İHRACAT SANAYİ VE TİCARET LİMİTED ŞİRKETİ";
@@ -113,80 +122,82 @@ function controlName($sName, $stationID)
     $Pacific      = "PASİFİK PETROLCÜLÜK ANONİM ŞİRKETİ";
     $Petline      = "PETLİNE PETROL ÜRÜNLERİ TİCARET ANONİM ŞİRKETİ";
     $Petrol_Ofisi = "PETROL OFİSİ ANONİM ŞİRKETİ";
-	$Remoil       = "RMG PETROL ÜRÜNLERİ DAĞITIM SANAYİ ANONİM ŞİRKETİ";
+    $Remoil       = "RMG PETROL ÜRÜNLERİ DAĞITIM SANAYİ ANONİM ŞİRKETİ";
     $Qplus        = "VTM AKARYAKIT PETROL ÜRÜNLERİ DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Sanoil       = "RPET PETROLCÜLÜK ANONİM ŞİRKETİ";
-	$Seypet       = "SRF PETROLCÜLÜK ANONİM ŞİRKETİ";
+    $Seypet       = "SRF PETROLCÜLÜK ANONİM ŞİRKETİ";
     $Shell        = "SHELL & TURCAS PETROL ANONİM ŞİRKETİ";
     $S_Oil        = "SİYAM PETROLCÜLÜK SANAYİ VE TİC. A.Ş .(S OIL)";
     $Teco         = "TECO PETROLCÜLÜK SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $Termo        = "TERMOPET AKARYAKIT ANONİM ŞİRKETİ";
     $Total        = "GÜZEL ENERJİ AKARYAKIT ANONİM ŞİRKETİ";
     $TP           = "TP PETROL DAĞITIM ANONİM ŞİRKETİ";
+    $Turkis       = "SOFTOİL AKARYAKIT ÜRÜNLERİ SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     $United       = "BİRLEŞİK PETROL ANONİM ŞİRKETİ";
-	$Welloil      = "ÇLB PETROLCÜLÜK ANONİM ŞİRKETİ";
+    $Welloil      = "ÇLB PETROLCÜLÜK ANONİM ŞİRKETİ";
+    $Socar        = "SOCAR TURKEY PETROL ENERJİ DAĞITIM SANAYİ VE TİCARET ANONİM ŞİRKETİ";
     
-	if ($sName === "7 Kıta") {
+    if ($sName === "7 Kıta") {
         if ($distName === $Kita7) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Alpet") {
         if ($distName === $Alpet) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Aytemiz") {
         if ($distName === $Aytemiz) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Best") {
         if ($distName === $Best) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo 'MARKA UYUŞMAZLIĞI: ' . $EPDK . "<br>";
         }
     } else if ($sName === "Bpet") {
         if ($distName === $Bpet) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "BP") {
         if ($distName === $BP) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Çekoil") {
         if ($distName === $Cekoil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Das") {
         if ($distName === $Das) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Ecoxpet") {
         if ($distName === $Ecoxpet) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Energy") {
@@ -199,27 +210,28 @@ function controlName($sName, $stationID)
         if ($distName === $Enkoil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Euroil") {
         if ($distName === $Euroil) {
             updateStation();
         } else {
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Eva") {
         if ($distName === $Eva) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "GO") {
         if ($distName === $GO) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Goldoil") {
@@ -232,7 +244,7 @@ function controlName($sName, $stationID)
         if ($distName === $Gulf) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Hemoil") {
@@ -245,24 +257,24 @@ function controlName($sName, $stationID)
         if ($distName === $Hypco) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Kadoil") {
         if ($distName === $Kadoil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "K-Pet") {
         if ($distName === $Kpet) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
-    }	else if ($sName === "Lionpet") {
+    } else if ($sName === "Lionpet") {
         if ($distName === $Lionpet) {
             updateStation();
         } else {
@@ -272,77 +284,77 @@ function controlName($sName, $stationID)
         if ($distName === $Lukoil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Maspet") {
         if ($distName === $Maspet) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Memoil") {
         if ($distName === $Memoil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Moil") {
         if ($distName === $Moil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Mola") {
         if ($distName === $Mola) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Naspet") {
         if ($distName === $Nasoil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Netoil") {
         if ($distName === $Netoil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Opet" || $sName === "Sunpet") {
         if ($distName === $Opet) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Pacific") {
         if ($distName === $Pacific) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Petline") {
         if ($distName === $Petline) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Petrol Ofisi") {
         if ($distName === $Petrol_Ofisi) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Remoil") {
@@ -355,82 +367,97 @@ function controlName($sName, $stationID)
         if ($distName === $Qplus) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Sanoil") {
         if ($distName === $Sanoil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Seypet") {
         if ($distName === $Seypet) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Shell") {
         if ($distName === $Shell) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "S-Oil") {
         if ($distName === $S_Oil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Teco") {
         if ($distName === $Teco) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Termo") {
         if ($distName === $Termo) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Total") {
         if ($distName === $Total) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Türkiye Petrolleri") {
         if ($distName === $TP) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
+            echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
+        }
+    } else if ($sName === "Türkiş") {
+        if ($distName === $Turkis) {
+            updateStation();
+        } else {
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "United") {
         if ($distName === $United) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else if ($sName === "Welloil") {
         if ($distName === $Welloil) {
             updateStation();
         } else {
-			recordMismatch($stationID, $sName, $distName, $EPDK);
+            recordMismatch($stationID, $sName, $distName, $EPDK);
+            echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
+        }
+    } else if ($sName === "Socar") {
+        if ($distName === $Socar) {
+            updateStation();
+        } else {
+            recordMismatch($stationID, $sName, $distName, $EPDK);
             echo "<b>MARKA UYUŞMAZLIĞI: " . $EPDK . "</b><br>";
         }
     } else {
         // MARKA SİSTEMDE KAYITLI DEĞİL
         echo 'BİLİNMEYEN MARKA: ' . $distName . " - ";
+        //insertCompany($distName);
         updateStation();
     }
 }
@@ -439,17 +466,17 @@ function controlLPGPrice($lpgFiyat)
 {
     global $LPGPrice;
     
-    // We accept 3.00 and give random arbitrage
-    $LPGPrice = 3.00;
-    $min      = 0.05;
+    // We accept 3.20 and give random arbitrage
+    $LPGPrice = 3.20;
+    $min      = 0.01;
     $max      = 0.50;
-    // Random between 0.05 ₺ - 0.50 ₺ discount (04.02.2020)
+    // Random between 0.01 ₺ - 0.50 ₺ increase (09.09.2020)
     
     $decimals = 2;
     $divisor  = pow(10, $decimals);
     
     $fiyatMarji = mt_rand($min * $divisor, $max * $divisor) / $divisor;
-    $LPGPrice   = $LPGPrice - $fiyatMarji;
+    $LPGPrice   = $LPGPrice + $fiyatMarji;
     
     return number_format($LPGPrice, 2);
 }
@@ -463,8 +490,9 @@ function findStation()
     global $stationCountry;
     global $LPGPrice;
     global $elecPrice;
-	global $il;
-	global $ilce;
+    global $il;
+    global $ilce;
+	global $distName;
     
     $sql    = "SELECT * FROM stations WHERE licenseNo = '" . $EPDK . "'";
     $result = $conn->query($sql);
@@ -476,13 +504,13 @@ function findStation()
         $LPGPrice       = $row["lpgPrice"];
         $elecPrice      = $row["electricityPrice"];
         
-        if ($LPGPrice != 0.00 && $LPGPrice > 3.15) {
+        if ($LPGPrice != 0.00 && $LPGPrice < 3.21) {
             controlLPGPrice($LPGPrice);
         }
         
-        controlName($stationName, $stationID);
+        controlName($stationName, $stationID, $distName);
     } else {
-		recordMissingLicense($EPDK, $distName, $il, $ilce);
+        recordMissingLicense($EPDK, $distName, $il, $ilce);
         echo 'İSTASYON BULUNAMADI:' . $EPDK . "<br>";
     }
 }
@@ -507,19 +535,19 @@ function controlPrices()
         $dieselPrice  = $pahaliMazot;
     }
     
-    if ($gasolinePrice < 4.50 || $gasolinePrice >= 7.00) {
+    if ($gasolinePrice < 5.00 || $gasolinePrice >= 7.50) {
         $gasolinePrice = 0.00;
     }
     
-    if ($gasolinePrice2 < 4.50 || $gasolinePrice2 >= 7.00) {
+    if ($gasolinePrice2 < 5.00 || $gasolinePrice2 >= 7.50) {
         $gasolinePrice2 = 0.00;
     }
     
-    if ($dieselPrice < 4.50 || $dieselPrice >= 7.00) {
+    if ($dieselPrice < 5.00 || $dieselPrice >= 7.50) {
         $dieselPrice = 0.00;
     }
     
-    if ($dieselPrice2 < 4.50 || $dieselPrice2 >= 7.00) {
+    if ($dieselPrice2 < 5.00 || $dieselPrice2 >= 7.50) {
         $dieselPrice2 = 0.00;
     }
     
@@ -589,10 +617,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit;
     }
     
-    if (strlen($ilce) == 0) {
-        echo "ILCE required";
-        exit;
-    }
+    //if (strlen($ilce) == 0) {
+    //    echo "ILCE required";
+    //    exit;
+    // }
     
     if (strlen($captcha) == 0) {
         echo "CAPTCHA required";
@@ -600,7 +628,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     
     $context     = stream_context_create($opts);
-    $requestURL  = "https://www.epdk.org.tr/Detay/PompaFiyatlari?ddlIl=" . $il . "&ddlIlce=" . $ilce . "&txtCaptcha=" . $captcha;
+    $requestURL  = "https://www.epdk.gov.tr/Detay/PompaFiyatlari?ddlIl=" . $il . "&ddlIlce=" . $ilce . "&ddlDagitici=&txtBayi=&txtCaptcha=" . $captcha;
     $content     = file_get_contents($requestURL, false, $context);
     $first_step  = explode('<tbody>', $content);
     $second_step = explode("</tbody>", $first_step[1]);
@@ -654,6 +682,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $distName = str_replace("Ä°", "İ", $distName);
             $distName = str_replace("Å", "Ş", $distName);
             $distName = str_replace("Ä", "Ğ", $distName);
+			$distName = str_replace("Ãœ", "Ü", $distName);
+		
         } else {
             $distName = "";
         }

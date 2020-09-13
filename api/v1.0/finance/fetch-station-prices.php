@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
 
-    $sql = "SELECT * FROM finance WHERE stationID = '" . $stationID . "' ORDER BY date DESC LIMIT 7";
+    $sql = "SELECT * FROM finance WHERE stationID = '" . $stationID . "' ORDER BY date DESC LIMIT 50";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {

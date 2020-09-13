@@ -8,7 +8,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 	require_once('../../credentials.php');
 	$conn = connectFSDatabase();
-    $sql = "SELECT * FROM reports ORDER BY id DESC";
+
+    $sql = "SELECT * FROM missing_licenses ORDER BY id ASC";
 
     $result = $conn->query($sql);
     if (mysqli_num_rows($result) > 0) {
@@ -17,5 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
         }
         echo json_encode($outPutArray);
     }
+
     mysqli_close($conn);
 }
